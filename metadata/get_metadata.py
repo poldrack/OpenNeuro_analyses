@@ -39,15 +39,20 @@ def get_dataset_ids():
 snapshot_query = '"query { dataset(id: \\"%s\\") { snapshots {id}}}"'
 
 def get_snapshots(id):
-    pass
+    data = '{"query": %s}' % (snapshot_query % id)
+    response = requests.post('https://openneuro.org/crn/graphql', headers=headers, data=data)
+    md = response.json()
+    return([i['id'] for i in md['data']['dataset']['snapshots']])
 
 
-metadata_query = '"query { dataset(id: \\"%s\\") { latestSnapshot { id description { Name Funding Acknowledgements }}}}"'
+metadata_query = '"query { dataset(id: \\"%s\\") { %s { id description { Name Funding Acknowledgements }}}}"'
 
-def get_metadata(id):
+def get_metadata(id, snapshot=None):
+    if snapshot is None:
+        snapshot = "latestSnapshot"
     # get funding/acknowledgements for a specific dataset
     # 
-    data = '{"query": %s}' % (metadata_query % id)
+    data = '{"query": %s}' % (metadata_query % (id, snapshot))
     response = requests.post('https://openneuro.org/crn/graphql', headers=headers, data=data)
     return(response.json())
 
@@ -56,8 +61,9 @@ if __name__ == '__main__':
     dataset_ids = get_dataset_ids()
 
     metadata = {}
-
+    snapshots = {}
     for id in dataset_ids:
+        snapshots[id] = get_snapshots(id)
         metadata[id] = get_metadata(id)
         print(metadata[id])
 
