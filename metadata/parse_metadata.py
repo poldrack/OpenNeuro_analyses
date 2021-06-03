@@ -7,6 +7,7 @@ import pandas as pd
 
 grant_codes = list(pd.read_csv('ActivityCodes.csv')['ACT_CODE'])
 institute_codes = list(pd.read_csv('IC_abbrevs.csv', header=None).loc[:, 0])
+grant_codes.remove('S10')
 
 
 # load brain initiative grants
@@ -123,10 +124,7 @@ if __name__ == "__main__":
     metadata_file = 'funding_metadata.json'
     bi_grant_file = 'funded_awards-2021-05-30T12-08-20.csv'
 
-    grant_codes = list(pd.read_csv('ActivityCodes.csv')['ACT_CODE'])
-    institute_codes = list(pd.read_csv('IC_abbrevs.csv', header=None).loc[:, 0])
-
-    # get brain intitiative grant info
+   # get brain intitiative grant info
     bi_grant_df = pd.read_csv(bi_grant_file).dropna()
     bi_project_nums = get_bi_project_numbers(bi_grant_file)
     bi_grants = get_bi_grant_nums(bi_project_nums)
