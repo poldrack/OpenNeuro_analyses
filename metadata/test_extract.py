@@ -28,28 +28,11 @@ def extract_nih_grants(s, verbose=False):
                     s.replace(*patterns)
             
     # bespoke fixes for particular datasets
-    replacements = {'R01MH-': 'R01MH',
-                    'R01-MH-': 'R01MH',
-                    'RO1': 'R01',
+    replacements = {'RO1': 'R01',
                     '01A1': ''}
     for k, r in replacements.items():
         if s.find(k) > -1:
             s = s.replace(k, r)
-
-
-    # consolidate code and grant number if there are spaces between
-    # also remove dash within grant code
-    for g in grant_codes:
-        if s.find(g + ' ') > -1:
-            print('replacing', s)
-            s = s.replace(g + ' ', g)
-            print(s)
-            print('')
-        if s.find(g + '-') > -1:
-            print('replacing', s)
-            s = s.replace(g + '-', g)
-            print(s)
-            print('')
     
     # remove all punctuation so we can split by spaces
     s = re.sub(r"[(),.;@#?!&$]+\ *", " ", s) #s.translate(str.maketrans(' ', ' ', string.punctuation))
