@@ -38,9 +38,9 @@ def extract_funding_info(f, snapshot=None, verbose=False):
     # pull Funding and Acknowledgments from dataset metadata
     if snapshot is None:
         snapshot = 'latestSnapshot'
-    if f['data']['dataset'] is None:
+    if f['data']['snapshot'] is None:
         return None
-    md = f['data']['dataset'][snapshot]
+    md = f['data']['snapshot']
     id = md['id']
 
     if 'Funding' in md['description'] and md['description']['Funding'] is not None:
@@ -63,6 +63,7 @@ def extract_nih_grants(s, verbose=False):
     
     # load nih grant and institute codes from files
     grant_codes = list(pd.read_csv('ActivityCodes.csv')['ACT_CODE'])
+    #grant_codes.remove('S10')
     institute_codes = list(pd.read_csv('IC_abbrevs.csv', header=None).loc[:, 0])
 
     def hasNumbers(inputString):
@@ -77,17 +78,24 @@ def extract_nih_grants(s, verbose=False):
         if s.find(k) > -1:
             s = s.replace(k, r)
 
-    # consolidate code and grant number if there are spaces between
-    # also remove dash within grant code
-    for g in grant_codes:
-        if s.find(g + ' ') > -1:
-            s = s.replace(g + ' ', g)
-        if s.find(g + '-') > -1:
-            s = s.replace(g + '-', g)
     # remove all punctuation so we can split by spaces
     s = re.sub(r"[(),.;@#?!&$]+\ *", " ", s) #s.translate(str.maketrans(' ', ' ', string.punctuation))
     if verbose:
         print(s)
+
+    # consolidate code and grant number if there are spaces between
+    # also remove dash within grant code
+    for g in grant_codes:
+        if s.find(g + ' ') > -1:
+            print('replacing', s)
+            s = s.replace(g + ' ', g)
+            print(s)
+            print('')
+        if s.find(g + '-') > -1:
+            print('replacing', s)
+            s = s.replace(g + '-', g)
+            print(s)
+            print('')
     
     potential_grant_strings = []
     for i in s.split(' '):
@@ -133,6 +141,8 @@ if __name__ == "__main__":
     grant_info = {}
     grants_cited = {}
     for k, md in funding.items():
+        if md is None:
+            continue
         f = extract_funding_info(md)
         # don't store entries with no funding/ackowledgments
         if f is not None and len(f) > 0:
