@@ -3,7 +3,7 @@
 import json
 import re
 import pandas as pd
-
+import string
 
 grant_codes = list(pd.read_csv('ActivityCodes.csv')['ACT_CODE'])
 institute_codes = list(pd.read_csv('IC_abbrevs.csv', header=None).loc[:, 0])
@@ -74,15 +74,17 @@ def remove_grant_codes(s):
         fixed = fixed.replace(rem_string, '')
     return fixed
 
-def bespoke_fix(s):
+def bespoke_fix(s, replacements=None):
     # bespoke fixes for particular datasets
-    replacements = {
-                    'R01MH-': 'R01MH',
-                    'R01-MH-': 'R01MH',
-                    'RO1': 'R01',
-                    '01A1': '',
-                    'NIMH': 'MH'
-                    }
+    if replacements is None:
+        replacements = {
+                        'R01MH-': 'R01MH',
+                        'R01-MH-': 'R01MH',
+                        'RO1': 'R01',
+                        '01A1': '',
+                        'NIMH': 'MH',
+                        'NIH': ''
+                        }
     for k, r in replacements.items():
         if s.find(k) > -1:
             s = s.replace(k, r)
@@ -117,7 +119,43 @@ def extract_nih_grants(s, verbose=False):
 
     return good
     
+def extract_nsf_grants(s):
+    nsf_grants_found = []
+    replacements = {' CAREER ':'-',
+                    '(DDRI) Grant #': 'NSF-',
+                    'NSF Graduate Research Fellowship (#': 'NSF-',
+                    'NSFECCS': 'ECC-',
+                    'NSFNCS-FR ': 'NCS-',
+                    'NCS program (#': 'NCS-',
+                    'NSF CAREER award (#': 'NSF-',
+                    'National Science Foundation (': 'NSF-',
+                    'NSF Career Award ': 'NSF-',
+                    'NSF grant #': 'NSF-',
+                    'NSF grants #': 'NSF-',
+                    '# 1': 'NSF-1',
+                    'NSF ': 'NSF-',
+                    'NSF1': 'NSF-1',
+                    '#BCS': 'BCS',
+                    'National Science Foundation 1': 'NSF-1'}
+    if (s.find('National Science Foundation') > -1) or (s.find('NSF') > -1):  
+        # nsf_grants_found.append(s)
+        if ('Swiss' in s) or ('China' in s):
+            return([])
+        s = bespoke_fix(s, replacements)
+        s = s.translate(str.maketrans('', '', '!#$%&()*+,./:;<=>?@[\\]^_`{|}~'))
+        for s_s in s.split(' '):
+            fullmatch = re.findall("[A-Z]{3}-[\d]{6,}", s_s)
+            for m in fullmatch:
+                nsf_grants_found.append(m)
+    return(nsf_grants_found)
 
+
+def mentions_bi(s):
+    # does it mention BRAIN iniative
+    if 'brain initiative' in s.lower() or 'BRAIN' in s:
+        return(True)
+    else:
+        return(False)
 
 if __name__ == "__main__":
     verbose = True
@@ -140,6 +178,8 @@ if __name__ == "__main__":
     
     grant_info = {}
     grants_cited = {}
+    nsf_grants_cited = {}
+    bi_mentions = {}
     for k, md in funding.items():
         if md is None:
             continue
@@ -152,11 +192,17 @@ if __name__ == "__main__":
     # find grants for each dataset
     for k, gi in grant_info.items():
         grants_cited[k] = []
+        nsf_grants_cited[k] = []
         for s in gi:
-            grants_found = extract_nih_grants(s)
-            for grant in grants_found:
+            nih_grants_found = extract_nih_grants(s)
+            for grant in nih_grants_found:
                 grants_cited[k].append(grant)
-
+            nsf_grants_found = extract_nsf_grants(s)
+            for grant in nsf_grants_found:
+                nsf_grants_cited[k].append(grant)
+            if mentions_bi(s):
+                bi_mentions[k] = s
+        
     # consolidate all grants
     all_grants = []
     for k, grants in grants_cited.items():
@@ -180,3 +226,12 @@ if __name__ == "__main__":
         print(matching_grant['Title'].values[0])
         print(matching_grant['Investigator'].values[0])
         print('')
+    
+    all_nsf_grants = []
+    for k, grants in nsf_grants_cited.items():
+        if grants is not None:
+            for g in grants:
+                all_nsf_grants.append(g)
+    all_nsf_grants = list(set(all_nsf_grants))
+    print(f'{len(all_nsf_grants)} unique NSF grants cited in OpenNeuro')
+   
