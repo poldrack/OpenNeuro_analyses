@@ -4,6 +4,8 @@ import json
 import re
 import pandas as pd
 import string
+from collections import defaultdict
+import requests
 
 grant_codes = list(pd.read_csv('ActivityCodes.csv')['ACT_CODE'])
 institute_codes = list(pd.read_csv('IC_abbrevs.csv', header=None).loc[:, 0])
@@ -157,6 +159,30 @@ def mentions_bi(s):
     else:
         return(False)
 
+
+def is_nih_grant(grantnum, dummy=False):
+    # return True if grant number is found in NIH reporter
+    # based on https://gist.github.com/bosborne/8efbd21ffbe3dc8d057d80539114ab07
+    if dummy:
+        return(True)
+    url = 'https://api.federalreporter.nih.gov/v1/Projects/search'
+    params = {'query': f'projectNumber:*{grantnum}*'}
+    r = requests.get(url, params=params)
+    retval = r.json()
+    return retval['totalCount'] > 0
+
+def is_nsf_grant(grantnum):
+    # return True if grant number is found in NIH reporter
+    # based on https://gist.github.com/bosborne/8efbd21ffbe3dc8d057d80539114ab07
+    # remove category if present (assumes delimited by dash)
+    if '-' in grantnum:
+        grantnum = grantnum.split('-')[1]
+    url = f'http://api.nsf.gov/services/v1/awards/{grantnum}.json'
+    r = requests.get(url)
+    retval = r.json()
+    return 'award' in retval['response']
+
+
 if __name__ == "__main__":
     verbose = True
     metadata_file = 'funding_metadata.json'
@@ -177,8 +203,8 @@ if __name__ == "__main__":
         print(f'found metadata for {len(funding)} OpenNeuro datasets')
     
     grant_info = {}
-    grants_cited = {}
-    nsf_grants_cited = {}
+    grants_cited = defaultdict(lambda: [])
+    nsf_grants_cited = defaultdict(lambda: [])
     bi_mentions = {}
     for k, md in funding.items():
         if md is None:
@@ -191,27 +217,46 @@ if __name__ == "__main__":
 
     # find grants for each dataset
     for k, gi in grant_info.items():
-        grants_cited[k] = []
-        nsf_grants_cited[k] = []
+        dsnum = k.split(':')[0]
         for s in gi:
             nih_grants_found = extract_nih_grants(s)
             for grant in nih_grants_found:
-                grants_cited[k].append(grant)
+                if is_nih_grant(grant):
+                    grants_cited[dsnum].append(grant)
             nsf_grants_found = extract_nsf_grants(s)
             for grant in nsf_grants_found:
-                nsf_grants_cited[k].append(grant)
+                if is_nsf_grant(grant):
+                    nsf_grants_cited[dsnum].append(grant)
             if mentions_bi(s):
                 bi_mentions[k] = s
+    
+    for k, grants in grants_cited.items():
+        grants_cited[k] = list(set(grants))
+    for k, grants in nsf_grants_cited.items():
+        nsf_grants_cited[k] = list(set(grants))
         
+
     # consolidate all grants
+    cited_grants = defaultdict(lambda: []) # add default []
+    cited_bi_grants = defaultdict(lambda: [])
     all_grants = []
     for k, grants in grants_cited.items():
         if len(grants) > 0:
             all_grants += grants
     all_grants = list(set(all_grants))
     
-    # crossreference against bi grants
+    # index by datasets
+    dataset_grants = defaultdict(lambda: [])
+    dataset_grants_nsf = defaultdict(lambda: [])
+    for k, grants in grants_cited.items():
+        for g in grants:
+            dataset_grants[g].append(k)
+    for k, grants in nsf_grants_cited.items():
+        for g in grants:
+            dataset_grants_nsf[g].append(k)
+    
     bi_matches = []
+    # crossreference against bi grants
     for g in all_grants:
         if g in bi_grants:
             bi_matches.append(g)
@@ -219,14 +264,21 @@ if __name__ == "__main__":
     print(f'{len(all_grants)} unique NIH grants cited in OpenNeuro')
     print(f'{len(bi_matches)} BI grants cited in OpenNeuro')
 
+    bi_datasets = []
     for i in bi_matches:
         project_match = [p for p in bi_grant_df['Project Number'] if p.find(i) > -1]
         matching_grant = bi_grant_df.query('`Project Number` == "%s"' % project_match[0])
         print(project_match)
         print(matching_grant['Title'].values[0])
         print(matching_grant['Investigator'].values[0])
+        print(dataset_grants[i])
+        bi_datasets += dataset_grants[i]
         print('')
+    bi_datasets = list(set(bi_datasets))
     
+    print(f'{len(bi_datasets)} unique datasets associated with BI grants')
+
+
     all_nsf_grants = []
     for k, grants in nsf_grants_cited.items():
         if grants is not None:
