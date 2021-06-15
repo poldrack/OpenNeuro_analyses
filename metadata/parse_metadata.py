@@ -117,7 +117,8 @@ def extract_nih_grants(s, verbose=False):
         found_digits = re.search("[\d]{5,}", potential)
         if (two_letters and found_digits):
             good.append(two_letters.group() + found_digits.group())
-    print(potentials, good)
+    if verbose:
+        print(potentials, good)
 
     return good
     
