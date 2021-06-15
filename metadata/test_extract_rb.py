@@ -16,7 +16,8 @@ import re
     ('K01ES-025442', 'ES025442'),
     ('S10 OD 021480', 'OD021480'),
     ('1R01-DA021146', 'DA021146'),
-    ('Funded by NIH grant U01NS103780 (RP, RA and MH)', 'NS103780')])
+    ('Funded by NIH grant U01NS103780 (RP, RA and MH)', 'NS103780'),
+    ('NIH R01 MH111447', 'MH111447')])
 def test_extract(grantstring, grantnum):
     g = extract_nih_grants(grantstring)
     assert grantnum in g
