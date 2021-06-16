@@ -1,0 +1,27 @@
+How I generated openneuro reuse data (June 2021):
+
+1) download_papers.sh: attempts to download all the papers resulting from an 'openneuro' google scholar search. Make sure to adjust the number in the for loop according to the number of openneuro results pages. Afterward, double check to make sure each directory contains 'bibtex.bib' and 'result.csv'.
+
+2) manual_download.sh PAGE_DIR: this script prints each line for which the download failed. it asks for user input to get the URL to download the paper and will name it appropriately. Note that URL can also be a local path i.e. 'file:///Users/...'
+
+3) validate_pdfs.sh: check that all pdfs are fully downloaded and not corrupted
+
+4) Check that there are no duplicate papers. I imported in google sheets and highlighted rows with same paper name or same doi. 
+
+5) find_openneuro.sh: searches for 'openneuro' in each paper and prints whether it appears. Papers without this should be inspected using check_no_match.sh to make sure file title matches the actual paper title.
+
+6) create_all_result.sh: combines all the 'result.csv' files into a single 'papers/all_result.csv'
+
+7) paper2txt.sh: converts every pdf in 'papers/' to a .txt file located in 'papers_txt/'
+
+8) Create a file called 'openneuro_authors.tsv', which contains one column of dataset numbers and one of authors list. This can easily be copied from metadata.openneuro.org. And create a file called 'paper_list.tsv', which contains two columns: paper name and author list
+
+9) mine_papers.sh paper_list.tsv: Searches the corresponding paper for dataset mentions, and uses user input to create a resulting file 'mappings.tsv'. 
+
+10) Import the mappings into a google sheet or spreadsheet, filtering out any mappings other than 'reuse'. A seconds tab can be made containg a list of papers with metdata.
+
+11) get_doi.sh: I discovered many incorrect DOIs so this script helps to manually verify and/or replace each doi. I wait until now to do this as I will only take the time to get correct metadata on papers coded as 'reuse'.
+
+12) pybliometrics can be then be used with with DOIs to acquire 'senior author', 'senior author country', 'year' and 'journal' for many of the papers via scopus api. Crossref api can be tried for those that failed. Others will require manual acquisition.
+
+13) Finally, use python package 'scholarly' to get number of citations for each paper since google scholar seems to be the most reliable source for this. I had to change my VPN location about 10 times in order to go through all the papers since google will cut you off after too many queries.
