@@ -3,12 +3,11 @@
 import json
 import re
 import pandas as pd
-import string
 from collections import defaultdict
 import requests
 
-grant_codes = list(pd.read_csv('ActivityCodes.csv')['ACT_CODE'])
-institute_codes = list(pd.read_csv('IC_abbrevs.csv', header=None).loc[:, 0])
+grant_codes = list(pd.read_csv('../data/nih_data/ActivityCodes.csv')['ACT_CODE'])
+institute_codes = list(pd.read_csv('../data/nih_data/IC_abbrevs.csv', header=None).loc[:, 0])
 grant_codes.remove('S10')
 
 
@@ -48,7 +47,6 @@ def extract_funding_info(f, snapshot=None, verbose=False):
     if f['data']['snapshot'] is None:
         return None
     md = f['data']['snapshot']
-    id = md['id']
 
     if 'Funding' in md['description'] and md['description']['Funding'] is not None:
         funding = md['description']['Funding']
@@ -63,12 +61,15 @@ def extract_funding_info(f, snapshot=None, verbose=False):
 
     return(funding)
 
+
 def left_strip(s, delim):
     return s[s.find(delim):]
+
 
 def strip_non_alnum(s):
     alphanumeric_filter = filter(str.isalnum, s)
     return "".join(alphanumeric_filter)
+
 
 def remove_grant_codes(s):
     fixed = s
@@ -76,24 +77,24 @@ def remove_grant_codes(s):
         fixed = fixed.replace(rem_string, '')
     return fixed
 
+
 def bespoke_fix(s, replacements=None):
     # bespoke fixes for particular datasets
     if replacements is None:
-        replacements = {
-                        'R01MH-': 'R01MH',
+        replacements = {'R01MH-': 'R01MH',
                         'R01-MH-': 'R01MH',
                         'RO1': 'R01',
                         '01A1': '',
                         'NIMH': 'MH',
-                        'NIH': ''
-                        }
+                        'NIH': ''}
     for k, r in replacements.items():
         if s.find(k) > -1:
             s = s.replace(k, r)
     return s
- 
+
 
 '''
+   Notes from Ross on this version of the extractor:
    First we remove or replace known wonky sequences,
    Then we break the input string up into a list of all substrings that start with a capital letter, and consist only
    of '-', white space, numbers, and capital letters,
@@ -104,6 +105,8 @@ def bespoke_fix(s, replacements=None):
    them, or do a findall and attempt further tests to determine which set of two letters, or numbers is most
    appropriate.
 '''
+
+
 def extract_nih_grants(s, verbose=False):
     s = bespoke_fix(s)
     first_pass_regex = re.compile("[A-Z0-9][A-Z0-9\s-]+")
@@ -121,10 +124,11 @@ def extract_nih_grants(s, verbose=False):
         print(potentials, good)
 
     return good
-    
+
+
 def extract_nsf_grants(s):
     nsf_grants_found = []
-    replacements = {' CAREER ':'-',
+    replacements = {' CAREER ': '-',
                     '(DDRI) Grant #': 'NSF-',
                     'NSF Graduate Research Fellowship (#': 'NSF-',
                     'NSFECCS': 'ECC-',
@@ -140,7 +144,7 @@ def extract_nsf_grants(s):
                     'NSF1': 'NSF-1',
                     '#BCS': 'BCS',
                     'National Science Foundation 1': 'NSF-1'}
-    if (s.find('National Science Foundation') > -1) or (s.find('NSF') > -1):  
+    if (s.find('National Science Foundation') > -1) or (s.find('NSF') > -1):
         # nsf_grants_found.append(s)
         if ('Swiss' in s) or ('China' in s):
             return([])
@@ -155,10 +159,7 @@ def extract_nsf_grants(s):
 
 def mentions_bi(s):
     # does it mention BRAIN iniative
-    if 'brain initiative' in s.lower() or 'BRAIN' in s:
-        return(True)
-    else:
-        return(False)
+    return 'brain initiative' in s.lower() or 'BRAIN' in s
 
 
 def is_nih_grant(grantnum, dummy=False):
@@ -171,6 +172,7 @@ def is_nih_grant(grantnum, dummy=False):
     r = requests.get(url, params=params)
     retval = r.json()
     return retval['totalCount'] > 0
+
 
 def is_nsf_grant(grantnum):
     # return True if grant number is found in NIH reporter
@@ -186,23 +188,22 @@ def is_nsf_grant(grantnum):
 
 if __name__ == "__main__":
     verbose = True
-    metadata_file = 'funding_metadata.json'
-    bi_grant_file = 'funded_awards-2021-05-30T12-08-20.csv'
+    metadata_file = '../data/openneuro/funding_metadata.json'
+    bi_grant_file = '../data/nih_data/funded_awards-2021-05-30T12-08-20.csv'
 
-   # get brain intitiative grant info
+    # get brain intitiative grant info
     bi_grant_df = pd.read_csv(bi_grant_file).dropna()
     bi_project_nums = get_bi_project_numbers(bi_grant_file)
     bi_grants = get_bi_grant_nums(bi_project_nums)
     if verbose:
         print(f'found {len(bi_grants)} BI grants')
-    
 
     # load ON metadata and parse
     with open(metadata_file) as f:
         funding = json.load(f)
     if verbose:
         print(f'found metadata for {len(funding)} OpenNeuro datasets')
-    
+
     grant_info = {}
     grants_cited = defaultdict(lambda: [])
     nsf_grants_cited = defaultdict(lambda: [])
@@ -230,22 +231,21 @@ if __name__ == "__main__":
                     nsf_grants_cited[dsnum].append(grant)
             if mentions_bi(s):
                 bi_mentions[k] = s
-    
+
     for k, grants in grants_cited.items():
         grants_cited[k] = list(set(grants))
     for k, grants in nsf_grants_cited.items():
         nsf_grants_cited[k] = list(set(grants))
-        
 
     # consolidate all grants
-    cited_grants = defaultdict(lambda: []) # add default []
+    cited_grants = defaultdict(lambda: [])  # add default []
     cited_bi_grants = defaultdict(lambda: [])
     all_grants = []
     for k, grants in grants_cited.items():
         if len(grants) > 0:
             all_grants += grants
     all_grants = list(set(all_grants))
-    
+
     # index by datasets
     dataset_grants = defaultdict(lambda: [])
     dataset_grants_nsf = defaultdict(lambda: [])
@@ -255,13 +255,8 @@ if __name__ == "__main__":
     for k, grants in nsf_grants_cited.items():
         for g in grants:
             dataset_grants_nsf[g].append(k)
-    
-    bi_matches = []
-    # crossreference against bi grants
-    for g in all_grants:
-        if g in bi_grants:
-            bi_matches.append(g)
-        
+
+    bi_matches = [g for g in all_grants if g in bi_grants]
     print(f'{len(all_grants)} unique NIH grants cited in OpenNeuro')
     print(f'{len(bi_matches)} BI grants cited in OpenNeuro')
 
@@ -276,9 +271,8 @@ if __name__ == "__main__":
         bi_datasets += dataset_grants[i]
         print('')
     bi_datasets = list(set(bi_datasets))
-    
-    print(f'{len(bi_datasets)} unique datasets associated with BI grants')
 
+    print(f'{len(bi_datasets)} unique datasets associated with BI grants')
 
     all_nsf_grants = []
     for k, grants in nsf_grants_cited.items():
@@ -287,4 +281,3 @@ if __name__ == "__main__":
                 all_nsf_grants.append(g)
     all_nsf_grants = list(set(all_nsf_grants))
     print(f'{len(all_nsf_grants)} unique NSF grants cited in OpenNeuro')
-   

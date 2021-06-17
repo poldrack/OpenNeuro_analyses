@@ -2,7 +2,6 @@
 
 import requests
 import json
-from simplejson.errors import JSONDecodeError
 
 headers = {
     'Accept-Encoding': 'gzip, deflate, br',
@@ -13,6 +12,7 @@ headers = {
     'Origin': 'https://openneuro.org',
     'accessToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YTI0OTc3NC02ZDkxLTQ4MDUtOTY1YS1hODNhNzY1MzYzYTQiLCJlbWFpbCI6InBvbGRyYWNrQGdtYWlsLmNvbSIsInByb3ZpZGVyIjoiZ29vZ2xlIiwibmFtZSI6IlJ1c3MgUG9sZHJhY2siLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIyNjU4NDM1LCJleHAiOjE2NTQxOTQ0MzV9.cuMmSr4VDlSBDdZVKU567t7p_Hxf_nti9hXzOdXEzeA'
 }
+
 
 def get_dataset_ids():
     # get all dataset ids
@@ -38,28 +38,26 @@ def get_dataset_ids():
 
 
 # may want to use this to get all snapshots
-snapshot_query = '"query { dataset(id: \\"%s\\") { snapshots {id}}}"'
+
 
 def get_snapshots(id):
+    snapshot_query = '"query { dataset(id: \\"%s\\") { snapshots {id}}}"'
     data = '{"query": %s}' % (snapshot_query % id)
     response = requests.post('https://openneuro.org/crn/graphql', headers=headers, data=data)
     md = response.json()
     return([i['id'] for i in md['data']['dataset']['snapshots']])
 
 
-metadata_query_latest = '"query { dataset(id: \\"%s\\") { latestSnapshot { id description { Name Funding Acknowledgements }}}}"'
-metadata_query_tag = '"query { snapshot(datasetId: \\"%s\\", tag:\\"%s\\") { id description { Name Funding Acknowledgements }}}"'
-
 def get_metadata(id):
     # get funding/acknowledgements for a specific dataset
-    # 
     if id.find(':') > -1:
         id, tag = id.split(':')
+        metadata_query_tag = '"query { snapshot(datasetId: \\"%s\\", tag:\\"%s\\") { id description { Name Funding Acknowledgements }}}"'
         data = '{"query": %s}' % (metadata_query_tag % (id, tag))
     else:
         tag = None
+        metadata_query_latest = '"query { dataset(id: \\"%s\\") { latestSnapshot { id description { Name Funding Acknowledgements }}}}"'
         data = '{"query": %s}' % (metadata_query_latest % id)
-    #print(data)
     response = requests.post('https://openneuro.org/crn/graphql', headers=headers, data=data)
     return(response.json())
 
@@ -76,15 +74,14 @@ if __name__ == '__main__':
         for s in snapshots[id]:
             try:
                 metadata[s] = get_metadata(s)
-            except:  # I KNOW THIS IS BAD
-                # just try again
+            except:  # I KNOW BARE EXCEPTS ARE BAD
+                # just try again, sometimes randomly fails
                 try:
                     print('retrying', s)
                     metadata[s] = get_metadata(s)
                 except:
                     metadata[s] = None
                     print('tried twice and failed:', s)
-        #print(metadata[s])
 
-    with open('funding_metadata.json', 'w') as f:
+    with open('../data/openneuro/funding_metadata.json', 'w') as f:
         json.dump(metadata, f)
