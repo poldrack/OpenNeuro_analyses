@@ -1,0 +1,246 @@
+Title,Dataset Mention
+Bayesian mixed effect sparse tensor response regression model with joint estimation of activation and connectivity,ds000001
+Exploring the impact of analysis software on task fMRI results,ds000001
+Fine-grain atlases of functional modes for fMRI analysis,ds000001
+Joint Bayesian Estimation of Voxel Activation and Inter-regional Connectivity in fMRI Experiments,ds000001
+On the Reproducibility and Interpretability of Group-Level Task-fMRI Results,ds000001
+Performance Evaluation of Big Data Processing Strategies for Neuroimaging,ds000001
+Fine-grain atlases of functional modes for fMRI analysis,ds000002
+Short-term classification learning promotes rapid global improvements of information processing in human brain functional connectome,ds000002
+Analysis of task-based functional MRI data preprocessed with fMRIPrep,ds000003
+Beware (surprisingly common) left-right flips in your MRI data: an efficient and robust method to check MRI dataset consistency using AFNI,ds000003
+Estimating feedforward and feedback effective connections from fMRI time series: Assessments of statistical methods,ds000003
+Fine-grain atlases of functional modes for fMRI analysis,ds000003
+Inferring Effective Connectivity Networks From fMRI Time Series With a Temporal Entropy-Score,ds000003
+The visual word form area (VWFA) is part of both language and attention circuitry,ds000003
+Fine-grain atlases of functional modes for fMRI analysis,ds000006
+Fine-grain atlases of functional modes for fMRI analysis,ds000007
+Side information dependence as a regularizer for analyzing human brain conditions across cognitive experiments,ds000007
+Fine-grain atlases of functional modes for fMRI analysis,ds000008
+Side information dependence as a regularizer for analyzing human brain conditions across cognitive experiments,ds000008
+Fine-grain atlases of functional modes for fMRI analysis,ds000011
+Fine-grain atlases of functional modes for fMRI analysis,ds000017
+3D deformable convolutions for MRI classification,ds000030
+3DCNN interpretation facilitates MRI-based disease classification,ds000030
+A pipeline to characterize local cortical folds by mapping them to human-interpretable shapes,ds000030
+Activity flow underlying abnormalities in brain activations and cognition in schizophrenia,ds000030
+Common and different gray and white matter alterations in bipolar and borderline personality disorder: A source-based morphometry study,ds000030
+Detecting microstructural deviations in individuals with deep diffusion MRI tractometry,ds000030
+Disentangling age‐and disease‐related alterations in schizophrenia brain network using structural equation modeling: A graph theoretical study based on minimum …,ds000030
+"Distinct and temporally associated neural mechanisms underlying concurrent, postsuccess, and posterror cognitive controls: Evidence from a stop‐signal task",ds000030
+Distinct hierarchical alterations of intrinsic neural timescales account for different manifestations of psychosis,ds000030
+Effects of spatial smoothing on group-level differences in functional brain networks,ds000030
+Equitable thresholding and clustering,ds000030
+Evaluation of denoising strategies for task‐based functional connectivity: Equalizing residual motion artifacts between rest and cognitively demanding tasks,ds000030
+Fastsurfer-a fast and accurate deep learning based neuroimaging pipeline,ds000030
+"Highly predictive transdiagnostic features shared across schizophrenia, bipolar disorder, and adhd identified using a machine learning based approach",ds000030
+Identifying and removing widespread signal deflections from fMRI data: Rethinking the global signal regression problem,ds000030
+Investigating inhibition deficit in schizophrenia using task-modulated brain networks,ds000030
+Linking cerebellar functional gradients to transdiagnostic behavioral dimensions of psychopathology,ds000030
+"Machine learning models identify multimodal measurements highly predictive of transdiagnostic symptom severity for mood, anhedonia, and anxiety",ds000030
+Multimodal MRI Study Using Convolutional Neural Networks for Schizophrenia Classification,ds000030
+Non-linear manifold learning in fMRI uncovers a low-dimensional space of brain dynamics,ds000030
+Out of control: An altered parieto-occipital-cerebellar network for impulsivity in bipolar disorder,ds000030
+PCA based dimensionality reduction of MRI images for training support vector machine to aid diagnosis of bipolar disorder,ds000030
+Probabilistic TFCE: a generalized combination of cluster size and voxel intensity to increase statistical power,ds000030
+Reproducible Coactivation Patterns of Functional Brain Networks Reveal the Aberrant Dynamic State Transition in Schizophrenia,ds000030
+Shared and distinct white matter abnormalities in schizophrenia and bipolar disorder,ds000030
+Testing the expanded continuum hypothesis of schizophrenia and bipolar disorder. Neural and psychological evidence for shared and distinct mechanisms,ds000030
+Inter-group Heterogeneity of Regional Homogeneity (REHO),ds000030
+A generalizable method for automated quality control of functional neuroimaging datasets,ds000030
+Diffusion-Weighted Imaging,ds000031
+Extraction of the cardiac waveform from simultaneous multislice fMRI data using slice sorted averaging and a deep learning reconstruction filter,ds000031
+Individualized event structure drives individual differences in whole-brain functional connectivity,ds000031
+The effect of global signal regression on DCM estimates of noise and effective connectivity from resting state fMRI,ds000031
+Fine-grain atlases of functional modes for fMRI analysis,ds000051
+Fine-grain atlases of functional modes for fMRI analysis,ds000052
+Short-term classification learning promotes rapid global improvements of information processing in human brain functional connectome,ds000052
+Meet me in the middle: brain-behavior mediation analysis for fMRI experiments,ds000053
+Fine-grain atlases of functional modes for fMRI analysis,ds000101
+Side information dependence as a regularizer for analyzing human brain conditions across cognitive experiments,ds000101
+Fine-grain atlases of functional modes for fMRI analysis,ds000102
+Side information dependence as a regularizer for analyzing human brain conditions across cognitive experiments,ds000102
+The visual word form area (VWFA) is part of both language and attention circuitry,ds000102
+Diffusion-Weighted Imaging,ds000105
+Fine-grain atlases of functional modes for fMRI analysis,ds000105
+Fuzzy general linear modeling for functional magnetic resonance imaging analysis,ds000105
+Neural topographic factor analysis for fmri data,ds000105
+On the analysis of layer-specific fMRI,ds000105
+Perceived Image Reconstruction from Human Brain Activity via Time-Series Information Guided Generative Adversarial Networks,ds000105
+Using distance on the Riemannian manifold to compare representations in brain and models,ds000105
+Fine-grain atlases of functional modes for fMRI analysis,ds000107
+Short-term classification learning promotes rapid global improvements of information processing in human brain functional connectome,ds000107
+Spatial 3D Mat'ern priors for fast whole-brain fMRI analysis,ds000107
+"ENIGMA HALFpipe: Interactive, reproducible, and efficient analysis for resting-state and task-based fMRI data",ds000108
+Exploring the impact of analysis software on task fMRI results,ds000109
+Fine-grain atlases of functional modes for fMRI analysis,ds000109
+On the Reproducibility and Interpretability of Group-Level Task-fMRI Results,ds000109
+Fine-grain atlases of functional modes for fMRI analysis,ds000110
+A manually denoised audio-visual movie watching fMRI dataset for the studyforrest project,ds000113
+Application of the sequential matrix diagonalization algorithm to high-dimensional functional MRI data,ds000113
+Generalizable dimensions of human cortical auditory processing of speech in natural soundscapes: A data-driven ultra high field fMRI approach,ds000113
+Beware (surprisingly common) left-right flips in your MRI data: an efficient and robust method to check MRI dataset consistency using AFNI,ds000114
+Fine-grain atlases of functional modes for fMRI analysis,ds000114
+Optimizing data processing to improve the reproducibility of single‐subject functional magnetic resonance imaging,ds000114
+3D deformable convolutions for MRI classification,ds000115
+Fine-grain atlases of functional modes for fMRI analysis,ds000115
+Generative Adversarial Networks and Markov Random Fields for oversampling very small training sets,ds000115
+Modeling the hemodynamic response function using simultaneous EEG-fMRI data and convolutional sparse coding analysis with rank-1 constraints,ds000116
+Non-stationary group-level connectivity analysis for enhanced interpretability of oddball tasks,ds000116
+Restricted function‐on‐function linear regression model,ds000116
+Capturing the nature of events and event context using Hierarchical Event Descriptors (HED),ds000117
+Computing phase amplitude coupling in EEGLAB: PACTools,ds000117
+Diffusion-Weighted Imaging,ds000117
+EEG extended source imaging with structured sparsity and   L   1 -norm residual,ds000117
+Event-related components are structurally represented by intrinsic event-related potentials,ds000117
+Fastsurfer-a fast and accurate deep learning based neuroimaging pipeline,ds000117
+From BIDS-formatted EEG data to sensor-space group results: a fully reproducible workflow with EEGLAB and LIMO EEG,ds000117
+MEG current source reconstruction using a meta-analysis fMRI prior,ds000117
+MEG source imaging and group analysis using VBMEG,ds000117
+MEG/EEG group analysis with brainstorm,ds000117
+MULTIVARIATE STATISTICS AND DECODING FOR ELECTROENCEPHALOGRAPHIC DATA,ds000117
+MVPA-Light: a classification and regression toolbox for multi-dimensional data,ds000117
+Structural connectivity to reconstruct brain activation and effective connectivity between brain regions,ds000117
+The open eeglab portal interface: High-performance computing with eeglab,ds000117
+Exploring the impact of analysis software on task fMRI results,ds000120
+On the Reproducibility and Interpretability of Group-Level Task-fMRI Results,ds000120
+Fine-grain atlases of functional modes for fMRI analysis,ds000133
+fMRI-Based Machine Learning Analysis of Neural Substrates of Pediatric Anxiety: Temporal Pole and Emotional Face-Responses.,ds000144
+Brainglance: visualizing group level MRI data at one glance,ds000158
+Fuzzy general linear modeling for functional magnetic resonance imaging analysis,ds000158
+Inter-subject pattern analysis for multivariate group analysis of functional neuroimaging. A unifying formalization,ds000158
+Permutation-based true discovery guarantee by sum tests,ds000158
+All-resolutions inference for brain imaging,ds000158
+Comparing Alternative Computational Models of the Stroop Task Using Effective Connectivity Analysis of fMRI Data,ds000164
+Fine-grain atlases of functional modes for fMRI analysis,ds000164
+Fine-grain atlases of functional modes for fMRI analysis,ds000170
+Fine-grain atlases of functional modes for fMRI analysis,ds000171
+Group-representative functional network estimation from multi-subject fMRI data via MRF-based image segmentation,ds000171
+"Joint, Partially-Joint, and Individual Independent Component Analysis in Multi-Subject fMRI Data",ds000171
+Modelling of Transcranial Magnetic Stimulation (TMS) Induced Fields in Different Age Groups,ds000171
+Neural topographic factor analysis for fmri data,ds000171
+Transcriptional and cellular signatures of cortical morphometric similarity remodelling in chronic pain,ds000171
+Beware (surprisingly common) left-right flips in your MRI data: an efficient and robust method to check MRI dataset consistency using AFNI,ds000172
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000172
+Fine-grain atlases of functional modes for fMRI analysis,ds000200
+Age effect on functional connectivity changes of right anterior insula after partial sleep deprivation,ds000201
+Age effect on gray matter volume changes after sleep restriction,ds000201
+Age-related abnormalities of thalamic shape and dynamic functional connectivity after three hours of sleep restriction,ds000201
+Sleeping While Awake: The Intrusion of Neural Activity Associated with Sleep Onset in the Awake Human Brain,ds000201
+Fine-grain atlases of functional modes for fMRI analysis,ds000203
+Fine-grain atlases of functional modes for fMRI analysis,ds000205
+Fastsurfer-a fast and accurate deep learning based neuroimaging pipeline,ds000206
+A candidate neuroimaging biomarker for detection of neurotransmission-related functional alterations and prediction of pharmacological analgesic response in …,ds000208
+Transcriptional and cellular signatures of cortical morphometric similarity remodelling in chronic pain,ds000208
+Sailing in rough waters: examining volatility of fMRI noise,ds000210
+Inter-group Heterogeneity of Regional Homogeneity (REHO),ds000210
+Common and different gray and white matter alterations in bipolar and borderline personality disorder: A source-based morphometry study,ds000214
+Fine-grain atlases of functional modes for fMRI analysis,ds000214
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000217
+Fine-grain atlases of functional modes for fMRI analysis,ds000220
+Idiopathic and acquired pedophilia as two distinct disorders: an insight from neuroimaging,ds000221
+Intact microstructure of the right corticostriatal pathway predicts creative ability in healthy adults,ds000221
+Mapping internal brainstem structures using MP2RAGE derived T1 weighted and T1 relaxation images at 3 and 7 T,ds000221
+Prediction of stimulus-independent and task-unrelated thought from functional brain networks,ds000221
+Quantity and quality: Normative open-access neuroimaging databases,ds000221
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000223
+Brainglance: visualizing group level MRI data at one glance,ds000224
+Diving into the deep end: A personal reflection on the MyConnectome Study,ds000224
+Edge-centric functional network representations of human cerebral cortex reveal overlapping system-level architecture,ds000224
+Functional connectivity fingerprints at rest are similar across youths and adults and vary with genetic similarity,ds000224
+Hierarchical dynamics as a macroscopic organizing principle of the human brain,ds000224
+High-amplitude cofluctuations in cortical activity drive functional connectivity,ds000224
+Impact of concatenating fMRI data on reliability for functional connectomics,ds000224
+Individualized event structure drives individual differences in whole-brain functional connectivity,ds000224
+Precision functional mapping of human memory systems,ds000224
+Probabilistic mapping of human functional brain networks identifies regions of high group consensus,ds000224
+Quantifying control circuit regulation in the human brain.,ds000224
+Quantity and quality: Normative open-access neuroimaging databases,ds000224
+Rapid Precision Functional Mapping of Individuals using Multi-Echo fMRI,ds000224
+The effect of global signal regression on DCM estimates of noise and effective connectivity from resting state fMRI,ds000224
+The profiles of non-stationarity and non-linearity in the time series of resting-state brain networks,ds000224
+There is no single functional atlas even for a single individual: Functional parcel definitions change with task,ds000224
+Time‐varying nodal measures with temporal community structure: A cautionary note to avoid misinterpretation,ds000224
+Topographic gradients of intrinsic dynamics across neocortex,ds000224
+Common functional networks in the mouse brain revealed by multi-centre resting-state fMRI analysis,ds000228
+Conditional independence testing via weighted partial copulas,ds000228
+Emergence and organization of adult brain function throughout child development,ds000228
+Intersubject consistent dynamic connectivity during natural vision revealed by functional MRI,ds000228
+Modelling of Transcranial Magnetic Stimulation (TMS) Induced Fields in Different Age Groups,ds000228
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds000228
+Principal component analysis revealed multiple consistent responses to naturalistic stimuli in children and adults,ds000228
+"Spatial and temporal joint, partially-joint and individual sources in independent component analysis: Application to social brain fMRI dataset",ds000228
+The Euler Characteristic: A General Topological Descriptor for Complex Data,ds000228
+Uncovering the topology of time-varying fmri data using cubical persistence,ds000228
+Does rs-fMRI preprocessing matter for prediction performance in machine learning?,ds000228
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000232
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds000233
+The identification of temporal communities through trajectory clustering correlates with single-trial behavioural fluctuations in neuroimaging data,ds000235
+ASLPrep: A Generalizable Platform for Processing of Arterial Spin Labeled MRI and Quantification of Regional Brain Perfusion,ds000240
+Probabilistic mapping of human functional brain networks identifies regions of high group consensus,ds000243
+An International Multicenter Analysis of Brain Structure across Clinical Stages of Parkinson's Disease: The ENIGMA-Parkinson's Study,ds000245
+Identifying and removing widespread signal deflections from fMRI data: Rethinking the global signal regression problem,ds000258
+Sailing in rough waters: examining volatility of fMRI noise,ds000258
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001110
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001131
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001132
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001145
+Inter-group Heterogeneity of Regional Homogeneity (REHO),ds001168
+"Distinct regions of the striatum underlying effort, movement initiation and effort discounting",ds001168
+Quantifying structural connectivity in brain tumor patients,ds001226
+Corpus callosal microstructure predicts bimanual motor performance in chronic stroke survivors,ds001242
+Performance Optimization is Insufficient for Building Accurate Models for Neural Representation,ds001246
+Reconstructing natural scenes from fMRI patterns using BigBiGAN,ds001246
+Removing independent noise in systems neuroscience data using DeepInterpolation,ds001246
+Using distance on the Riemannian manifold to compare representations in brain and models,ds001246
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001338
+Neural signatures of attentional engagement during narratives and its consequences for event memory,ds001338
+APPIAN: automated pipeline for PET image analysis,ds001421
+Clinical brain PET research must embrace multi-centre collaboration and data sharing or risk its demise,ds001421
+How do we generalize?,ds001454
+The Connectivity Fingerprints of Highly-Skilled and Disordered Reading Persist Across Cognitive Domains,ds001486
+A Comparative Assessment of Statistical Approaches for fMRI Data to Obtain Activation Maps,ds001499
+"Brain Image Analysis, Classification and Reconstruction",ds001506
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001510
+Automatic skull stripping of rat and mouse brain MRI data using U-net,ds001541
+Custom-molded headcases have limited efficacy in reducing head motion during naturalistic fMRI experiments,ds001544
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds001545
+Automatic skull stripping of rat and mouse brain MRI data using U-net,ds001720
+"Data sharing and privacy issues in neuroimaging research: Opportunities, obstacles, challenges, and monsters under the bed",ds001734
+Subjective value and decision entropy are jointly encoded by aligned gradients across the human brain,ds001734
+The neural link between subjective value and decision entropy,ds001734
+Distortion correction of diffusion weighted MRI without reverse phase-encoding scans or field-maps,ds001743
+Inter-group Heterogeneity of Regional Homogeneity (REHO),ds001771
+Interpretation of Human Behavior from Multi-modal Brain MRI Images based on Graph Deep Neural Networks and Attention Mechanism,ds001771
+"Divergent Connectional Asymmetries of the Inferior Parietal Lobule Shape Hemispheric Specialization in Humans, Chimpanzees, and Macaque Monkeys",ds001875
+The Connectivity Fingerprints of Highly-Skilled and Disordered Reading Persist Across Cognitive Domains,ds001894
+Transcriptional and cellular signatures of cortical morphometric similarity remodelling in chronic pain,ds001928
+Atlas-based brain extraction is robust across rat MRI studies,ds001981
+Automatic skull stripping of rat and mouse brain MRI data using U-net,ds001981
+A ventromedial prefrontal dysrhythmia in obsessive-compulsive disorder is attenuated by nucleus accumbens deep brain stimulation,ds002179
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds002245
+Brain regions and networks supporting working memory and selective attention processing in typically developing and extremely preterm-born children,ds002320
+ReUINet: A fast GNL distortion correction approach on a 1.0 T MRI‐Linac scanner,ds002330
+"An fMRI dataset in response to “The Grand Budapest Hotel”, a socially-rich, naturalistic movie",ds002345
+Constructing and forgetting temporal context in the human cerebral cortex,ds002345
+Narratives for neuroscience,ds002345
+Putting psychology to the test: Rethinking model evaluation through benchmarking and prediction,ds002345
+On Tensor Distances For Self Organizing Maps: Clustering Cognitive Tasks,ds002366
+An edge-centric model for harmonizing multi-relational network datasets,ds002372
+"Functional connectivity predicts changes in attention observed across minutes, days, and months",ds002372
+On Hippocampus Associative Modeling by Approximating Nonlinear Kullback-Leibler Sparsity Constraint,ds002422
+A preliminary study of gray matter volume differences related to context-dependent and independent decision-making,ds002422
+Extracting Nonlinear Dynamics from Psychological and Behavioral Time Series Through HAVOK Analysis,ds002680
+NeuriViz (Part 1)-Performant Graphics for Neuroinformatics,ds002680
+ElectroEncephaloGraphy robust linear modelling using weights reflecting single trials' dynamics,ds002718
+From BIDS-formatted EEG data to sensor-space group results: a fully reproducible workflow with EEGLAB and LIMO EEG,ds002718
+Robust linear modelling in ElectroEncephaloGraphy can be obtained using single weights reflecting each single trials' dynamics,ds002718
+Generalizable brain network markers of major depressive disorder across multiple imaging sites,ds002748
+Rapid Precision Functional Mapping of Individuals using Multi-Echo fMRI,ds002766
+Inter-group Heterogeneity of Regional Homogeneity (REHO),ds002785
+Inter-group Heterogeneity of Regional Homogeneity (REHO),ds002790
+Intracranial brain stimulation modulates fMRI-based network switching,ds002799
+Atlas-based brain extraction is robust across rat MRI studies,ds002870
+Deep learning based segmentation of brain tissue from diffusion MRI,ds003037
+Toward more robust and reproducible diffusion kurtosis imaging,ds003346
+Thinking out loud: an open-access EEG-based BCI dataset for inner speech recognition,ds003626

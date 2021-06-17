@@ -1,0 +1,166 @@
+Title,DOI,URL,Senior Author,Publisher,Year,Country of Senior Author Affiliation,Number of Citations
+Side information dependence as a regularizer for analyzing human brain conditions across cognitive experiments,10.1609/aaai.v34i04.6179,n/a,Lu H.,AAAI Technical Track,2020,United Kingdom,3
+All-resolutions inference for brain imaging,10.1016/j.neuroimage.2018.07.060,n/a,Goeman J.,Academic Press,2018,Netherlands,14
+Probabilistic TFCE: a generalized combination of cluster size and voxel intensity to increase statistical power,10.1016/j.neuroimage.2018.09.078,n/a,Kincses Z.,Academic Press,2019,Hungary,26
+Extraction of the cardiac waveform from simultaneous multislice fMRI data using slice sorted averaging and a deep learning reconstruction filter,10.1016/j.neuroimage.2019.05.049,n/a,Frederick B.,Academic Press,2019,United States,12
+Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,10.1016/j.neuroimage.2019.116330,n/a,Poline J.,Academic Press,2020,Canada,10
+There is no single functional atlas even for a single individual: Functional parcel definitions change with task,10.1016/j.neuroimage.2019.116366,n/a,Constable R.,Academic Press,2020,United States,52
+The effect of global signal regression on DCM estimates of noise and effective connectivity from resting state fMRI,10.1016/j.neuroimage.2019.116435,n/a,Marinazzo D.,Academic Press,2020,Belgium,4
+Identifying and removing widespread signal deflections from fMRI data: Rethinking the global signal regression problem,10.1016/j.neuroimage.2020.116614,n/a,Fornito A.,Academic Press,2020,Australia,29
+Intersubject consistent dynamic connectivity during natural vision revealed by functional MRI,10.1016/j.neuroimage.2020.116698,n/a,Biswal B.,Academic Press,2020,United States,3
+Fastsurfer-a fast and accurate deep learning based neuroimaging pipeline,10.1016/j.neuroimage.2020.117012,n/a,Reuter M.,Academic Press,2020,United States,37
+Fine-grain atlases of functional modes for fMRI analysis,10.1016/j.neuroimage.2020.117126,n/a,Mensch A.,Academic Press,2020,France,6
+Custom-molded headcases have limited efficacy in reducing head motion during naturalistic fMRI experiments,10.1016/j.neuroimage.2020.117207,n/a,Chang L.,Academic Press,2020,United States,6
+The open eeglab portal interface: High-performance computing with eeglab,10.1016/j.neuroimage.2020.116778,n/a,Makeig S.,Academic Press,2021,United States,11
+Impact of concatenating fMRI data on reliability for functional connectomics,10.1016/j.neuroimage.2020.117549,n/a,Xu T.,Academic Press,2021,United States,4
+Emergence and organization of adult brain function throughout child development,10.1016/j.neuroimage.2020.117606,n/a,Turk-Browne N.,Academic Press,2021,United States,3
+Deep learning based segmentation of brain tissue from diffusion MRI,10.1016/j.neuroimage.2021.117934,n/a,Pasternak O.,Academic Press,2021,United States,3
+MEG current source reconstruction using a meta-analysis fMRI prior,10.1016/j.neuroimage.2021.118034,n/a,Yamashita O.,Academic Press,2021,Japan,0
+Probabilistic mapping of human functional brain networks identifies regions of high group consensus,10.1016/j.neuroimage.2021.118164,n/a,Gratton C.,Academic Press,2021,United States,1
+Bayesian mixed effect sparse tensor response regression model with joint estimation of activation and connectivity,arXiv:1904.00148,n/a,Prado R.,arxiv,2019,United States,2
+Neural topographic factor analysis for fmri data,arXiv:1906.08901 ,n/a,van de Meent J.,arxiv,2020,United States,1
+Spatial 3D Mat'ern priors for fast whole-brain fMRI analysis,arXiv:1906.10591,n/a,Villani M.,arxiv,2020,Sweden,3
+Conditional independence testing via weighted partial copulas,arXiv:2006.12839 ,n/a,Portier F.,arxiv,2021,France,1
+How do we generalize?,arXiv:2104.00899,n/a,Zeithamova D.,arxiv,2021,United States,0
+Permutation-based true discovery guarantee by sum tests,arXiv:2102.11759,n/a,Goeman J.,arxiv,2021,The Netherlands,1
+The Euler Characteristic: A General Topological Descriptor for Complex Data,arXiv:2103.03144,n/a,Zavala V.,arxiv,2021,United States,1
+Equitable thresholding and clustering,10.1101/295931,n/a,Cox R.,biorxiv,2018,United States,16
+"Highly predictive transdiagnostic features shared across schizophrenia, bipolar disorder, and adhd identified using a machine learning based approach",10.1101/453951,n/a,Ahammad P.,biorxiv,2018,United States,2
+The identification of temporal communities through trajectory clustering correlates with single-trial behavioural fluctuations in neuroimaging data,10.1101/617027,n/a,Poldrack R.,biorxiv,2019,United States,1
+Comparing Alternative Computational Models of the Stroop Task Using Effective Connectivity Analysis of fMRI Data,10.1101/647271,n/a,Stocco A.,biorxiv,2019,United States,0
+Principal component analysis revealed multiple consistent responses to naturalistic stimuli in children and adults,10.1101/2020.05.01.073163,n/a,Biswal B.,biorxiv,2020,United States,0
+Sleeping While Awake: The Intrusion of Neural Activity Associated with Sleep Onset in the Awake Human Brain,10.1101/2020.06.04.133603,n/a,Poudel G.,biorxiv,2020,Australia,5
+Linking cerebellar functional gradients to transdiagnostic behavioral dimensions of psychopathology,10.1101/2020.06.15.153254,n/a,Yao D.,biorxiv,2020,China,0
+Neural signatures of attentional engagement during narratives and its consequences for event memory,10.1101/2020.08.26.266320,n/a,Rosenberg M.,biorxiv,2020,United States,3
+Modeling the hemodynamic response function using simultaneous EEG-fMRI data and convolutional sparse coding analysis with rank-1 constraints,10.1101/2020.09.09.290296,n/a,Mitsis G.,biorxiv,2020,Canada,0
+Removing independent noise in systems neuroscience data using DeepInterpolation,10.1101/2020.10.15.341602,n/a,Koch C.,biorxiv,2020,United States,1
+Meet me in the middle: brain-behavior mediation analysis for fMRI experiments,10.1101/2020.10.17.343798,n/a,Daunizeau J.,biorxiv,2020,France,0
+A pipeline to characterize local cortical folds by mapping them to human-interpretable shapes,10.1101/2020.11.25.388785,n/a,Troiani V.,biorxiv,2020,United States,0
+Using distance on the Riemannian manifold to compare representations in brain and models,10.1101/2020.11.25.398511,n/a,Nili H.,biorxiv,2020,United Kingdom,0
+Non-linear manifold learning in fMRI uncovers a low-dimensional space of brain dynamics,10.1101/2020.11.25.398693,n/a,Scheinost D.,biorxiv,2020,United States,0
+Activity flow underlying abnormalities in brain activations and cognition in schizophrenia,10.1101/2020.12.16.423109,n/a,Cole M.,biorxiv,2020,United States,0
+An edge-centric model for harmonizing multi-relational network datasets,10.1101/2021.01.07.425450,n/a,Betzel R.,biorxiv,2021,United States,2
+"Divergent Connectional Asymmetries of the Inferior Parietal Lobule Shape Hemispheric Specialization in Humans, Chimpanzees, and Macaque Monkeys",10.1101/2021.01.26.428189,n/a,Jiang T.,biorxiv,2021,China,0
+A candidate neuroimaging biomarker for detection of neurotransmission-related functional alterations and prediction of pharmacological analgesic response in …,10.1101/2021.02.17.431572,n/a,Dipasquale O.,biorxiv,2021,United Kingdom,0
+Individualized event structure drives individual differences in whole-brain functional connectivity,10.1101/2021.03.12.435168,n/a,Sporns O.,biorxiv,2021,United States,3
+Transcriptional and cellular signatures of cortical morphometric similarity remodelling in chronic pain,10.1101/2021.03.24.436777,n/a,Williams S.,biorxiv,2021,United Kingdom,0
+Reproducible Coactivation Patterns of Functional Brain Networks Reveal the Aberrant Dynamic State Transition in Schizophrenia,10.1101/2021.03.29.437611,n/a,Biswal B.,biorxiv,2021,China,0
+Quantifying control circuit regulation in the human brain.,10.1101/2021.03.30.437729,n/a,Mujica-Parodi L.,biorxiv,2021,United States,0
+Thinking out loud: an open-access EEG-based BCI dataset for inner speech recognition,10.1101/2021.04.19.440473,n/a,Spies R.,biorxiv,2021,Argentina,0
+ElectroEncephaloGraphy robust linear modelling using weights reflecting single trials' dynamics,10.1101/2021.04.27.441629,n/a,Delorme A.,biorxiv,2021,France,0
+Robust linear modelling in ElectroEncephaloGraphy can be obtained using single weights reflecting each single trials' dynamics,10.1101/2021.04.27.441629,n/a,Delorme A.,biorxiv,2021,France,0
+Capturing the nature of events and event context using Hierarchical Event Descriptors (HED),10.1101/2021.05.06.442841,n/a,Makeig S.,biorxiv,2021,United States,0
+"ENIGMA HALFpipe: Interactive, reproducible, and efficient analysis for resting-state and task-based fMRI data",10.1101/2021.05.07.442790,n/a,Veer I.,biorxiv,2021,Germany,0
+Corpus callosal microstructure predicts bimanual motor performance in chronic stroke survivors,10.1101/2021.05.14.443663,n/a,Winstein C.,biorxiv,2021,United States,0
+ASLPrep: A Generalizable Platform for Processing of Arterial Spin Labeled MRI and Quantification of Regional Brain Perfusion,10.1101/2021.05.20.444998,n/a,Satterthwaite T.,biorxiv,2021,United States,0
+Restricted function‐on‐function linear regression model,10.1111/biom.13463,n/a,Qi X.,Blackwell Publishing Inc.,2021,United States,0
+NeuriViz (Part 1)-Performant Graphics for Neuroinformatics,n/a,http://jacobzelko.com/neuriviz-1/,Zelko J.,blog,2020,United States,0
+Performance Optimization is Insufficient for Building Accurate Models for Neural Representation,10.32470/CCN.2018.1148-0,n/a,Pillow J.,CCN,2018,United States,0
+Constructing and forgetting temporal context in the human cerebral cortex,10.1016/j.neuron.2020.02.013,n/a,Honey C.,Cell,2020,United States,26
+The neural link between subjective value and decision entropy,10.1038/s42003-020-01315-3,n/a,Love B.,Communications Biology,2020,United Kingdom,0
+Distinct hierarchical alterations of intrinsic neural timescales account for different manifestations of psychosis,10.7554/eLife.56151,n/a,Horga G.,eLife Sciences Publications Ltd,2020,United States,6
+Topographic gradients of intrinsic dynamics across neocortex,10.7554/eLife.62116,n/a,Mišić B.,eLife Sciences Publications Ltd,2020,Canada,14
+Testing the expanded continuum hypothesis of schizophrenia and bipolar disorder. Neural and psychological evidence for shared and distinct mechanisms,10.1016/j.nicl.2019.101854,n/a,Grecucci A.,Elsevier,2019,Italy,12
+Narratives for neuroscience,10.1016/j.tins.2020.03.003,n/a,Milivojevic B.,Elsevier,2020,Netherlands,17
+Shared and distinct white matter abnormalities in schizophrenia and bipolar disorder,10.1016/j.pnpbp.2020.110175,n/a,Lee J.,Elsevier,2021,South Korea,3
+Rapid Precision Functional Mapping of Individuals using Multi-Echo fMRI,10.1016/j.celrep.2020.108540,n/a,Liston C.,Elsevier B.V.,2020,United States,7
+"Spatial and temporal joint, partially-joint and individual sources in independent component analysis: Application to social brain fMRI dataset",10.1016/j.jneumeth.2019.108453,n/a,Shamsollahi M.,Elsevier B.V.,2020,Iran,0
+Out of control: An altered parieto-occipital-cerebellar network for impulsivity in bipolar disorder,10.1016/j.bbr.2021.113228,n/a,Grecucci A.,Elsevier B.V.,2021,Italy,0
+Common and different gray and white matter alterations in bipolar and borderline personality disorder: A source-based morphometry study,10.1016/j.brainres.2021.147401,n/a,Dadomo H.,Elsevier B.V.,2021,Italy,0
+"Machine learning models identify multimodal measurements highly predictive of transdiagnostic symptom severity for mood, anhedonia, and anxiety",10.1016/j.bpsc.2019.07.007,n/a,Ahammad P.,Elsevier Inc,2020,United States,7
+A ventromedial prefrontal dysrhythmia in obsessive-compulsive disorder is attenuated by nucleus accumbens deep brain stimulation,10.1016/j.brs.2021.04.028,n/a,Strange B.,Elsevier Inc.,2021,Spain,0
+Sailing in rough waters: examining volatility of fMRI noise,10.1016/j.mri.2021.02.009,n/a,Horvath B.,Elsevier Inc.,2021,United Kingdom,0
+Functional connectivity fingerprints at rest are similar across youths and adults and vary with genetic similarity,10.1016/j.isci.2019.100801,n/a,Church J.,Elsevier Inc.usjcs@elsevier.com,2020,United States,6
+Group-representative functional network estimation from multi-subject fMRI data via MRF-based image segmentation,10.1016/j.cmpb.2019.07.004,n/a,Kong N.,Elsevier Ireland Ltd,2019,United States,1
+Inter-subject pattern analysis for multivariate group analysis of functional neuroimaging. A unifying formalization,10.1016/j.cmpb.2020.105730,n/a,Takerkart S.,Elsevier Ireland Ltd,2020,France,0
+Diving into the deep end: A personal reflection on the MyConnectome Study,10.1016/j.cobeha.2020.10.008,n/a,Poldrack R.,Elsevier Ltd,2021,United States,3
+Precision functional mapping of human memory systems,10.1016/j.cobeha.2020.12.013,n/a,McDermott K.,Elsevier Ltd,2021,United States,1
+Generative Adversarial Networks and Markov Random Fields for oversampling very small training sets,10.1016/j.eswa.2020.113819,n/a,Safont G.,Expert Systems with Applications,2020,Spain,5
+Beware (surprisingly common) left-right flips in your MRI data: an efficient and robust method to check MRI dataset consistency using AFNI,10.3389/fninf.2020.00018,n/a,Reynolds R.,Frontiers in Neuroinformatics,2020,United States,2
+MEG source imaging and group analysis using VBMEG,10.3389/fnins.2019.00241,n/a,Yamashita O.,Frontiers in Neuroscience,2019,Japan,7
+The Connectivity Fingerprints of Highly-Skilled and Disordered Reading Persist Across Cognitive Domains,10.3389/fncom.2021.590093,n/a,McNorgan C.,Frontiers Media S.A.,2021,United States,0
+From BIDS-formatted EEG data to sensor-space group results: a fully reproducible workflow with EEGLAB and LIMO EEG,10.3389/fnins.2020.610388,n/a,Delorme A.,Frontiers Media S.A.,2021,France,2
+Automatic skull stripping of rat and mouse brain MRI data using U-net,10.3389/fnins.2020.568614,n/a,Ian Shih Y.,"Frontiers Media S.A.c/o Michael Kenyonch. de la Pecholettaz 6, Epalinges1066info@frontiersin.org",2020,United States,1
+APPIAN: automated pipeline for PET image analysis,10.3389/fninf.2018.00064,n/a,Thiel A.,Frontiers Media S.A.info@frontiersin.org,2018,Canada,7
+MEG/EEG group analysis with brainstorm,10.3389/fnins.2019.00076,n/a,Baillet S.,Frontiers Media S.A.info@frontiersin.org,2019,Canada,41
+Brainglance: visualizing group level MRI data at one glance,10.3389/fnins.2019.00972,n/a,Lohmann G.,Frontiers Media S.A.info@frontiersin.org,2019,Germany,2
+Short-term classification learning promotes rapid global improvements of information processing in human brain functional connectome,10.3389/fnhum.2019.00462,n/a,Biella G.,Frontiers Media S.A.info@frontiersin.org,2020,Italy,2
+MVPA-Light: a classification and regression toolbox for multi-dimensional data,10.3389/fnins.2020.00289,n/a,Treder M.,Frontiers Media S.A.info@frontiersin.org,2020,United Kingdom,16
+Non-stationary group-level connectivity analysis for enhanced interpretability of oddball tasks,10.3389/fnins.2020.00446,n/a,Acosta-Medina C.,Frontiers Media S.A.info@frontiersin.org,2020,Colombia,2
+The profiles of non-stationarity and non-linearity in the time series of resting-state brain networks,10.3389/fnins.2020.00493,n/a,Biswal B.,Frontiers Media S.A.info@frontiersin.org,2020,United States,2
+Atlas-based brain extraction is robust across rat MRI studies,10.1109/ISBI48211.2021.9433884,n/a,Esteban O.,IEEE Computer Society,2021,United States,0
+"Joint, Partially-Joint, and Individual Independent Component Analysis in Multi-Subject fMRI Data",10.1109/TBME.2019.2953274,n/a,Shamsollahi M.,IEEE Computer Societyhelp@computer.org,2019,Iran,1
+"Brain Image Analysis, Classification and Reconstruction",10.21608/fcihib.2020.116966,n/a,Khoriba G.,"Informatics Bulletin, Faculty of Computers and Artificial Intelligence, Helwan University",2020,Egypt,0
+Performance Evaluation of Big Data Processing Strategies for Neuroimaging,10.1109/CCGRID.2019.00059,n/a,Glatard T.,Institute of Electrical and Electronics Engineers Inc.,2019,Canada,1
+3D deformable convolutions for MRI classification,10.1109/ICMLA.2019.00278,n/a,Burnaev E.,Institute of Electrical and Electronics Engineers Inc.,2019,Russian Federation,4
+Fuzzy general linear modeling for functional magnetic resonance imaging analysis,10.1109/TFUZZ.2019.2936807,n/a,Allende H.,Institute of Electrical and Electronics Engineers Inc.,2019,Chile,1
+Computing phase amplitude coupling in EEGLAB: PACTools,10.1109/BIBE50027.2020.00070,n/a,Makeig S.,Institute of Electrical and Electronics Engineers Inc.,2020,United States,2
+Reconstructing natural scenes from fMRI patterns using BigBiGAN,10.1109/IJCNN48605.2020.9206960,n/a,VanRullen R.,Institute of Electrical and Electronics Engineers Inc.,2020,France,3
+On Hippocampus Associative Modeling by Approximating Nonlinear Kullback-Leibler Sparsity Constraint,10.1109/ICCCI50826.2021.9402467,n/a,Mudi R.,Institute of Electrical and Electronics Engineers Inc.,2021,India,0
+Inferring Effective Connectivity Networks From fMRI Time Series With a Temporal Entropy-Score,10.1109/TNNLS.2021.3072149,n/a,Zhang A.,Institute of Electrical and Electronics Engineers Inc.,2021,United States,1
+Structural connectivity to reconstruct brain activation and effective connectivity between brain regions,10.1088/1741-2552/ab8b2b,n/a,Papadopoulo T.,Institute of Physics Publishinghelen.craven@iop.org,2020,France,2
+Exploring the impact of analysis software on task fMRI results,10.1002/hbm.24603,n/a,Nichols T.,John Wiley and Sons,2019,United Kingdom,67
+Optimizing data processing to improve the reproducibility of single‐subject functional magnetic resonance imaging,10.1002/brb3.1617,n/a,Soltysik D.,John Wiley and Sons,2020,United States,0
+Intact microstructure of the right corticostriatal pathway predicts creative ability in healthy adults,10.1002/brb3.1895,n/a,Aarabi M.,John Wiley and Sons,2020,Italy,0
+Mapping internal brainstem structures using MP2RAGE derived T1 weighted and T1 relaxation images at 3 and 7 T,10.1002/hbm.24938,n/a,Mueller S.,John Wiley and Sons,2020,Germany,1
+Time‐varying nodal measures with temporal community structure: A cautionary note to avoid misinterpretation,10.1002/hbm.24950,n/a,Poldrack R.,John Wiley and Sons,2020,United States,8
+"Data sharing and privacy issues in neuroimaging research: Opportunities, obstacles, challenges, and monsters under the bed",10.1002/hbm.25120,n/a,Calhoun V.,John Wiley and Sons,2020,United States,14
+Evaluation of denoising strategies for task‐based functional connectivity: Equalizing residual motion artifacts between rest and cognitively demanding tasks,10.1002/hbm.25332,n/a,Giove F.,John Wiley and Sons,2021,Italy,0
+"Distinct and temporally associated neural mechanisms underlying concurrent, postsuccess, and posterror cognitive controls: Evidence from a stop‐signal task",10.1002/hbm.25347,n/a,Cannon T.,John Wiley and Sons,2021,United States,0
+Disentangling age‐and disease‐related alterations in schizophrenia brain network using structural equation modeling: A graph theoretical study based on minimum …,10.1002/hbm.25403,n/a,Biswal B.,John Wiley and Sons,2021,United States,0
+ReUINet: A fast GNL distortion correction approach on a 1.0 T MRI‐Linac scanner,10.1002/mp.14861,n/a,Liu F.,John Wiley and Sons,2021,Australia,0
+Toward more robust and reproducible diffusion kurtosis imaging,10.1002/mrm.28730,n/a,Veraart J.,John Wiley and Sons,2021,United States,1
+Age effect on functional connectivity changes of right anterior insula after partial sleep deprivation,10.1097/WNR.0000000000001347,n/a,Cheng F.,Lippincott Williams and Wilkinsagents@lww.com,2019,China,4
+An International Multicenter Analysis of Brain Structure across Clinical Stages of Parkinson's Disease: The ENIGMA-Parkinson's Study,10.1101/2020.04.28.20072710,n/a,van der Werf Y.,medrxiv,2020,United States,1
+Detecting microstructural deviations in individuals with deep diffusion MRI tractometry,10.1101/2021.02.23.21252011,n/a,Jones D.,medrxiv,2021,United Kingdom,0
+Quantifying structural connectivity in brain tumor patients,10.1101/2021.03.19.21253837,n/a,Price J.,medrxiv,2021,United Kingdom,0
+Estimating feedforward and feedback effective connections from fMRI time series: Assessments of statistical methods,10.1162/netn_a_00061,n/a,Glymour C.,MIT Press Journalscellas@mit.edu,2019,United States,26
+Effects of spatial smoothing on group-level differences in functional brain networks,10.1162/netn_a_00132,n/a,Korhonen O.,MIT Press Journalscellas@mit.edu,2020,Finland,2
+"Functional connectivity predicts changes in attention observed across minutes, days, and months",10.1073/pnas.1912226117,n/a,Chun M.,National Academy of Sciences,2020,United States,35
+High-amplitude cofluctuations in cortical activity drive functional connectivity,10.1073/pnas.2005531117,n/a,Betzel R.,National Academy of Sciences,2020,United States,9
+Hierarchical dynamics as a macroscopic organizing principle of the human brain,10.1073/pnas.2003383117,n/a,Raichle M.,National Academy of Sciencespnas@nas.edu,2020,United States,18
+fMRIPrep: a robust preprocessing pipeline for functional MRI,10.5281/zenodo.1340696,n/a,Gorgolewski K.,"Nature Publishing GroupHoundmillsBasingstoke, HampshireRG21 6XS",2019,United States,560
+The visual word form area (VWFA) is part of both language and attention circuitry,10.1038/s41467-019-13634-z,n/a,Menon V.,Nature Research,2019,United States,20
+Edge-centric functional network representations of human cerebral cortex reveal overlapping system-level architecture,10.1038/s41593-020-00719-y,n/a,Betzel R.,Nature Research,2020,United States,29
+Analysis of task-based functional MRI data preprocessed with fMRIPrep,10.1038/s41596-020-0327-3,n/a,Gorgolewski K.,Nature Research,2020,United States,12
+"An fMRI dataset in response to “The Grand Budapest Hotel”, a socially-rich, naturalistic movie",10.1038/s41597-020-00735-4,n/a,Gobbini M.,Nature Research,2020,Italy,3
+Prediction of stimulus-independent and task-unrelated thought from functional brain networks,10.1038/s41467-021-22027-0,n/a,Whitfield-Gabrieli S.,Nature Research,2021,United States,0
+"Distinct regions of the striatum underlying effort, movement initiation and effort discounting",10.1038/s41562-020-00972-y,n/a,Treadway M.,Nature Research,2021,United States,5
+Event-related components are structurally represented by intrinsic event-related potentials,10.1038/s41598-021-85235-0,n/a,Liang W.,Nature Research,2021,Taiwan,0
+Subjective value and decision entropy are jointly encoded by aligned gradients across the human brain,10.1038/s42003-020-01315-3,n/a,Love B.,Nature Researchsubscriptions@nature.com,2020,United Kingdom,0
+Uncovering the topology of time-varying fmri data using cubical persistence,n/a,https://papers.nips.cc/paper/2020/file/4d771504ddcd28037b4199740df767e6-Paper.pdf,Krishnaswamy S.,NeurIPS,2020,United States,5
+Intracranial brain stimulation modulates fMRI-based network switching,10.1016/j.nbd.2021.105401,n/a,Zalesky A.,Neurobiology of Disease,2018,Australia,0
+Generalizable dimensions of human cortical auditory processing of speech in natural soundscapes: A data-driven ultra high field fMRI approach,10.1016/j.neuroimage.2021.118106,n/a,Rieger J.,NeuroImage,2021,Germany,0
+Common functional networks in the mouse brain revealed by multi-centre resting-state fMRI analysis,10.1016/j.neuroimage.2019.116278,n/a,"Gozzi, A",Neuroimage,2019,Italy,0
+3DCNN interpretation facilitates MRI-based disease classification,n/a,https://openreview.net/forum?id=dYYSGLF7s2E,Sharaev M.,OpenReview,2021,Russia,0
+Age-related abnormalities of thalamic shape and dynamic functional connectivity after three hours of sleep restriction,10.7717/peerj.10751,n/a,Lei X.,PeerJ Inc.,2021,China,1
+PCA based dimensionality reduction of MRI images for training support vector machine to aid diagnosis of bipolar disorder,n/a,https://www.diva-portal.org/smash/get/diva2:1352547/FULLTEXT01.pdf,Chen B.,project,2019,Sweden,0
+Does rs-fMRI preprocessing matter for prediction performance in machine learning?,n/a,https://school.brainhackmtl.org/project/rs-fmri-preprocessing/,Alley S.,project,2020,France,0
+A Comparative Assessment of Statistical Approaches for fMRI Data to Obtain Activation Maps,n/a,https://www.causeweb.org/usproc/eusrc/2020/virtual-posters/4,Diukina C.,project,2021,United States,0
+Multimodal MRI Study Using Convolutional Neural Networks for Schizophrenia Classification,n/a,https://escholarship.org/uc/item/8dm3r21x,Mitchell B.,project,2021,United States,0
+Extracting Nonlinear Dynamics from Psychological and Behavioral Time Series Through HAVOK Analysis,10.31234/osf.io/d4c3f,n/a,Boker S.,psyarxiv,2020,United States,0
+Putting psychology to the test: Rethinking model evaluation through benchmarking and prediction,10.31234/osf.io/e437b,n/a,Yarkoni T.,psyarxiv,2020,United States,3
+A preliminary study of gray matter volume differences related to context-dependent and independent decision-making,10.31234/osf.io/k6jpx,n/a,Zhang J.,psyarxiv,2021,China,0
+Joint Bayesian Estimation of Voxel Activation and Inter-regional Connectivity in fMRI Experiments,10.1016/j.eswa.2020.113819,n/a,Prado R.,Psychometrika,2020,United States,5
+Generalizable brain network markers of major depressive disorder across multiple imaging sites,10.1371/journal.pbio.3000966,n/a,Imamizu H.,Public Library of Science,2020,Japan,5
+Age effect on gray matter volume changes after sleep restriction,10.1371/journal.pone.0228473,n/a,Lei X.,Public Library of Science,2020,China,4
+Quantity and quality: Normative open-access neuroimaging databases,10.1371/journal.pone.0248341,n/a,Forstmann B.,Public Library of Science,2021,Netherlands,0
+Distortion correction of diffusion weighted MRI without reverse phase-encoding scans or field-maps,10.1371/journal.pone.0236418,n/a,Landman B.,Public Library of Scienceplos@plos.org,2020,United States,3
+fMRI-Based Machine Learning Analysis of Neural Substrates of Pediatric Anxiety: Temporal Pole and Emotional Face-Responses.,10.21203/rs.3.rs-120600/v1,n/a,Greiner R.,Research Square,2020,Canada,0
+A manually denoised audio-visual movie watching fMRI dataset for the studyforrest project,10.6084/m9.figshare.10266554,n/a,Liu J.,Scientific Data,2019,China,2
+Application of the sequential matrix diagonalization algorithm to high-dimensional functional MRI data,10.1007/s00180-019-00925-8,n/a,Redif S.,Springer,2020,Belgium,0
+Clinical brain PET research must embrace multi-centre collaboration and data sharing or risk its demise,10.1007/s00259-019-04541-y,n/a,Červenka S.,Springer,2020,Sweden,5
+Investigating inhibition deficit in schizophrenia using task-modulated brain networks,10.1007/s00429-020-02078-7,n/a,Biswal B.,Springer,2020,United States,0
+Idiopathic and acquired pedophilia as two distinct disorders: an insight from neuroimaging,10.1007/s11682-020-00442-z,n/a,Camperio Ciani A.,Springer,2021,Italy,3
+Diffusion-Weighted Imaging,10.1007/978-3-030-29184-6,n/a,Polzehl J.,Springer Nature Switzerland,2019,Germany,3
+On Tensor Distances For Self Organizing Maps: Clustering Cognitive Tasks,10.1007/978-3-030-59051-2,n/a,Sioutas S.,Springer Nature Switzerland,2020,Greece,1
+Perceived Image Reconstruction from Human Brain Activity via Time-Series Information Guided Generative Adversarial Networks,10.1007/978-3-030-63823-8,n/a,Zhang D.,Springer Nature Switzerland,2020,China,0
+Modelling of Transcranial Magnetic Stimulation (TMS) Induced Fields in Different Age Groups,10.1007/978-3-030-65092-6_8,n/a,Croarkin P.,Springer Nature Switzerland,2021,United States,0
+A generalizable method for automated quality control of functional neuroimaging datasets,10.1007/978-3-030-53352-6_6,n/a,Martin W.,Springer Science and Business Media Deutschland,2021,United States,1
+EEG extended source imaging with structured sparsity and   L   1 -norm residual,10.1007/s00521-020-05603-1,n/a,Wang G.,Springer Science and Business Media Deutschland,2021,China,0
+MULTIVARIATE STATISTICS AND DECODING FOR ELECTROENCEPHALOGRAPHIC DATA,n/a,https://libstore.ugent.be/fulltxt/RUG01/002/479/678/RUG01-002479678_2018_0001_AC.pdf,Marinazzo D.,thesis,2018,Belgium,0
+On the Reproducibility and Interpretability of Group-Level Task-fMRI Results,10.31237/osf.io/mj7qa,n/a,Bowring A.,thesis,2019,United Kingdom,0
+Brain regions and networks supporting working memory and selective attention processing in typically developing and extremely preterm-born children,10138/319865,https://helda.helsinki.fi/bitstream/handle/10138/319865/tokariev_maksym_dissertation_2020.pdf?sequence=1&isAllowed=y,Tokariev M.,thesis,2020,Finland,0
+Inter-group Heterogeneity of Regional Homogeneity (REHO),n/a,https://www.ubishops.ca/wp-content/uploads/jiang20201212-updated.pdf,Jiang,thesis,2020,Canada,0
+On the analysis of layer-specific fMRI,n/a,https://repository.ubn.ru.nl/bitstream/handle/2066/197552/197552.pdf,"Van Mourik, T",thesis,2018,Netherlands,0
+Interpretation of Human Behavior from Multi-modal Brain MRI Images based on Graph Deep Neural Networks and Attention Mechanism,10.5220/0010214400560066,n/a,Farah I.,VISIGRAPP,2021,Tunisia,0
