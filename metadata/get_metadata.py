@@ -2,6 +2,7 @@
 
 import requests
 import json
+import sys
 
 headers = {
     'Accept-Encoding': 'gzip, deflate, br',
@@ -10,7 +11,7 @@ headers = {
     'Connection': 'keep-alive',
     'DNT': '1',
     'Origin': 'https://openneuro.org',
-    'accessToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2YTI0OTc3NC02ZDkxLTQ4MDUtOTY1YS1hODNhNzY1MzYzYTQiLCJlbWFpbCI6InBvbGRyYWNrQGdtYWlsLmNvbSIsInByb3ZpZGVyIjoiZ29vZ2xlIiwibmFtZSI6IlJ1c3MgUG9sZHJhY2siLCJhZG1pbiI6dHJ1ZSwiaWF0IjoxNjIyNjU4NDM1LCJleHAiOjE2NTQxOTQ0MzV9.cuMmSr4VDlSBDdZVKU567t7p_Hxf_nti9hXzOdXEzeA'
+    'accessToken': None
 }
 
 
@@ -63,6 +64,12 @@ def get_metadata(id):
 
 
 if __name__ == '__main__':
+    try:
+        with open('api_key.txt') as f:
+            headers['accessToken'] = f.readline().strip()
+    except FileNotFoundError:
+        print("You must first generate an API key at OpenNeuro.org and store it to api_key.txt")
+        sys.exit()
     print("getting dataset ids")
     dataset_ids = get_dataset_ids()
     print(f'found {len(dataset_ids)} datasets')
