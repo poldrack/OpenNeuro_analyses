@@ -5,3 +5,6 @@ get:
 
 parse:
 	python parse_metadata.py
+
+test:
+	python -m pytest
