@@ -4,6 +4,7 @@ from cognitiveatlas.api import get_task, get_concept, get_disorder
 from collections import defaultdict
 import json
 from urllib.error import URLError
+import re
 
 
 def load_cogat_terms(termsfile='../data/cognitiveatlas/terms.json'):
@@ -53,6 +54,32 @@ def get_cogat_terms(max_returns=None):
     disorder_df = get_disorder().pandas
     terms['disorder'] = cogat_dict_from_df(disorder_df, 'disorder', max_returns)
     return(terms)
+
+
+def get_cogat_matches(text, termdict, verbose=False):
+    # use re to identify whole word matches and ignore substring matches
+    matches = []
+    for termtype, terms in termdict.items():
+        for term, td in terms.items():
+            searchterms = [term.lower()]
+            if 'alias' in td and len(td['alias']) > 0:
+                for alias in td['alias'].split(','):
+                    searchterms.append(alias.lower())
+            for t in searchterms:
+                if len(t) == 0:
+                    continue
+                # occasionally an alias will fail due to escaped characters
+                # we just skip those
+                try:
+                    regex = re.compile(r"\b%s\b" % t)
+                    for i in regex.findall(text):
+                        matches.append((term, termtype))
+                        if verbose:
+                            print(t, termtype, term)
+                except:
+                    pass
+                    # print('search fails on', t, ' - skipping')
+    return(list(set(matches)))
 
 
 if __name__ == "__main__":
