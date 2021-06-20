@@ -8,13 +8,16 @@ def get_db_collection():
     db = client.openneuro
     return(db.datasets)
 
+
 def add_info_to_db(info):
     collection = get_db_collection()
     collection.insert_one(info)
 
+
 def ds_from_database(dsnum):
     collection = get_db_collection()
     return(collection.find_one({'dsnum': dsnum}))
+
 
 def delete_ds_from_db(dsnum):
     collection = get_db_collection()
