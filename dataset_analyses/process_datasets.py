@@ -43,7 +43,7 @@ def get_dataset_info(ds):
 
 
 if __name__ == "__main__":
-    metadata_file = '../data/openneuro/metadata_06172021.csv'
+    metadata_file = '../data/openneuro/metadata_06182021.csv'
     datadir = Path('/home/poldrack/data/openneuro')
     clobber = False
 
