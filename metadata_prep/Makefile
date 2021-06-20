@@ -1,7 +1,7 @@
 all: clean get parse
 
 clean:
-	-rm ../data/openneuro/funding_metadata.json
+	-rm ../data/openneuro/db_metadata.json
 
 get:
 	python get_metadata.py
