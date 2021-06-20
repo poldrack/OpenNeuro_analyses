@@ -1,11 +1,12 @@
 # utility functions for accessing cognitive atlas
+# and main function to download and clean up atlas entries
 
 from cognitiveatlas.api import get_task, get_concept, get_disorder
 from collections import defaultdict
 import json
 from urllib.error import URLError
 import re
-
+from utils import list_duplicates
 
 def load_cogat_terms(termsfile='../data/cognitiveatlas/terms.json'):
     try:
@@ -47,24 +48,41 @@ def get_cogat_terms(max_returns=None):
     terms = defaultdict(lambda: {})
     task_df = get_task().pandas
     terms['task'] = cogat_dict_from_df(task_df, 'task', max_returns)
+    terms['task'] = cleanup_aliases(terms['task'])
 
     concept_df = get_concept().pandas
     terms['concept'] = cogat_dict_from_df(concept_df, 'concept', max_returns)
+    terms['concept'] = cleanup_aliases(terms['concept'])
 
     disorder_df = get_disorder().pandas
     terms['disorder'] = cogat_dict_from_df(disorder_df, 'disorder', max_returns)
+    terms['disorder'] = cleanup_aliases(terms['disorder'])
     return(terms)
 
 
 def get_cogat_matches(text, termdict, verbose=False):
     # use re to identify whole word matches and ignore substring matches
     matches = []
+    # fix issues with terms that too easily match off-target text:
+    # "open" as alias to "openness"
+    # "EPI" as alias to Eysenck Personality Questionnaire
+    # "BIAS" as alias to behavioral investment allocation strategy
+    # "TOLD"
+    # "bdi" - used for battelle developmental inventory but more common for beck depression index
+    # "WIN"
+    # "MID"
+    terms_to_skip = ['open', 'epi', 'bias', 'told', 'bdi', 'abc', 'win', 'mid']
     for termtype, terms in termdict.items():
         for term, td in terms.items():
             searchterms = [term.lower()]
             if 'alias' in td and len(td['alias']) > 0:
                 for alias in td['alias'].split(','):
-                    searchterms.append(alias.lower())
+                    alias = alias.strip().lstrip()
+                    alias = re.sub('\(|\)', '', alias)
+                    if alias.lower() not in terms_to_skip:
+                        searchterms.append(alias.lower())
+                    elif verbose:
+                        print('skipping', alias)
             for t in searchterms:
                 if len(t) == 0:
                     continue
@@ -82,6 +100,28 @@ def get_cogat_matches(text, termdict, verbose=False):
     return(list(set(matches)))
 
 
+def cleanup_aliases(terms):
+    # clean up alias text and remove duplicates
+    all_aliases = []
+    for k, t in terms.items():
+        if 'alias' in t and len(t['alias']) > 0:
+            terms[k]['aliases_clean'] = [
+                i.strip() for i in re.sub('\(|\)', '', t['alias'].lower()).split(',')]
+            print(k, terms[k]['aliases_clean'])
+            for a in terms[k]['aliases_clean']:
+                all_aliases.append(a)
+        else:
+            terms[k]['aliases_clean'] = []
+    duplicate_aliases = list_duplicates(all_aliases)
+    for k, t in terms.items():
+        for alias in t['aliases_clean']:
+            if alias in duplicate_aliases:
+                terms[k]['aliases_clean'].remove(alias)
+    return(terms)
+
+
+
+
 if __name__ == "__main__":
     # get terms from API and save
-    load_cogat_terms()
+    terms = load_cogat_terms()
