@@ -1,25 +1,7 @@
 # test cogat functions
 
 import pytest
-from cogat import load_cogat_terms
-
-
-def get_cogat_matches(text, termdict):
-    matches = []
-    for termtype, terms in termdict.items():
-        for term, td in terms.items():
-            searchterms = [term.lower()]
-            if 'alias' in td and len(td['alias']) > 0:
-                for alias in td['alias'].split(','):
-                    print('search alias', term, alias)
-                    searchterms.append(alias.lower())
-            for t in searchterms:
-                if len(t) == 0:
-                    continue
-                t = t.lower()
-                if t in text:
-                    matches.append(term)
-    return(list(set(matches)))
+from cogat import load_cogat_terms, get_cogat_matches
 
 
 @pytest.fixture
@@ -34,10 +16,21 @@ def test_load(termdict):
     assert 'disorder' in termdict
 
 
-@pytest.mark.parametrize("input, matches",
+@pytest.mark.parametrize(
+    "input, matches",
     [('a working memory task', ['memory', 'working memory']),
-    ])
+     ('reading impairment', ['dyslexia'])])
 def test_matches(input, matches, termdict):
     cogat_matches = get_cogat_matches(input, termdict)
     for match in matches:
-        assert match in cogat_matches
+        assert match in [i[0] for i in cogat_matches]
+
+
+# tests that should fail
+@pytest.mark.parametrize(
+    "input, nonmatches",
+    [('rememory', ['memory'])])
+def test_false_matches(input, nonmatches, termdict):
+    cogat_matches = get_cogat_matches(input, termdict)
+    for match in nonmatches:
+        assert match not in [i[0] for i in cogat_matches]
