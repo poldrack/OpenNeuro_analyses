@@ -188,7 +188,7 @@ def is_nsf_grant(grantnum):
 
 if __name__ == "__main__":
     verbose = True
-    metadata_file = '../data/openneuro/funding_metadata.json'
+    metadata_file = '../data/openneuro/db_metadata.json'
     bi_grant_file = '../data/nih_data/funded_awards-2021-05-30T12-08-20.csv'
 
     # get brain intitiative grant info
