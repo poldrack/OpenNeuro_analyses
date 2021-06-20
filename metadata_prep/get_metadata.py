@@ -49,7 +49,7 @@ def get_snapshots(id):
     return([i['id'] for i in md['data']['dataset']['snapshots']])
 
 
-def get_metadata(id):
+def get_metadata(id, verbose=False):
     # get funding/acknowledgements for a specific dataset
     if id.find(':') > -1:
         id, tag = id.split(':')
@@ -57,8 +57,10 @@ def get_metadata(id):
         data = '{"query": %s}' % (metadata_query_tag % (id, tag))
     else:
         tag = None
-        metadata_query_latest = '"query { dataset(id: \\"%s\\") { latestSnapshot { id description { Name Funding Acknowledgements }}}}"'
+        metadata_query_latest = '"query { dataset(id: \\"%s\\") { latestSnapshot { id readme description { Name Funding Acknowledgements }}}}"'
         data = '{"query": %s}' % (metadata_query_latest % id)
+    if verbose:
+        print(data)
     response = requests.post('https://openneuro.org/crn/graphql', headers=headers, data=data)
     return(response.json())
 
@@ -77,6 +79,10 @@ if __name__ == '__main__':
     metadata = {}
     snapshots = {}
     for id in dataset_ids:
+        # there is a bug in graphql such that it won't return readme 
+        # for specific snapshots, only for latest
+        # so we will load latest and then insert it into the snapshots
+        latest_snapshot = get_metadata(id)
         snapshots[id] = get_snapshots(id)
         for s in snapshots[id]:
             try:
@@ -89,6 +95,9 @@ if __name__ == '__main__':
                 except:
                     metadata[s] = None
                     print('tried twice and failed:', s)
-
-    with open('../data/openneuro/funding_metadata.json', 'w') as f:
+            metadata[s]['readme'] = latest_snapshot[
+                'data']['dataset']['latestSnapshot']['readme']
+            metadata[s]['latestSnapshot'] = latest_snapshot[
+                'data']['dataset']['latestSnapshot']['id']
+    with open('../data/openneuro/db_metadata.json', 'w') as f:
         json.dump(metadata, f)
