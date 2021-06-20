@@ -4,3 +4,6 @@ terms:
 
 test:
 	python -m pytest cogat_test.py
+
+match:
+	python find_cogat_matches.py
