@@ -11,6 +11,6 @@ process:
 	python process_datasets.py
 
 analyze:
-	python analyze_datasets.py
+	python analyze_metadata.py
 
 
