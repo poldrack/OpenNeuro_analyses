@@ -4,6 +4,7 @@
 from cognitiveatlas.api import get_task, get_concept, get_disorder
 from collections import defaultdict
 import json
+import os
 from urllib.error import URLError
 import re
 from utils import list_duplicates
@@ -15,6 +16,8 @@ def load_cogat_terms(termsfile='../data/cognitiveatlas/terms.json'):
         print('using saved cognitive atlas terms')
     except FileNotFoundError:
         cogat_terms = get_cogat_terms()
+        if not os.path.exists(os.path.dirname(termsfile)):
+            os.makedirs(os.path.dirname(termsfile))
         with open(termsfile, 'w') as f:
             json.dump(cogat_terms, f)
     return(cogat_terms)
