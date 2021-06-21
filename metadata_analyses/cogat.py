@@ -75,10 +75,8 @@ def get_cogat_matches(text, termdict, verbose=False):
     for termtype, terms in termdict.items():
         for term, td in terms.items():
             searchterms = [term.lower()]
-            if 'alias' in td and len(td['alias']) > 0:
-                for alias in td['alias'].split(','):
-                    alias = alias.strip().lstrip()
-                    alias = re.sub('\(|\)', '', alias)
+            if len(td['aliases_clean']) > 0:
+                for alias in td['aliases_clean']:
                     if alias.lower() not in terms_to_skip:
                         searchterms.append(alias.lower())
                     elif verbose:
