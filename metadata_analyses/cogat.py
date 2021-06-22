@@ -74,7 +74,8 @@ def get_cogat_matches(text, termdict, verbose=False):
     # "bdi" - used for battelle developmental inventory but more common for beck depression index
     # "WIN"
     # "MID"
-    terms_to_skip = ['open', 'epi', 'bias', 'told', 'bdi', 'abc', 'win', 'mid']
+    # "MOT"
+    terms_to_skip = ['open', 'epi', 'bias', 'told', 'bdi', 'abc', 'win', 'mid', 'mot']
     for termtype, terms in termdict.items():
         for term, td in terms.items():
             searchterms = [term.lower()]
