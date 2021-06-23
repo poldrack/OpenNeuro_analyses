@@ -75,7 +75,9 @@ def get_cogat_matches(text, termdict, verbose=False):
     # "WIN"
     # "MID"
     # "MOT"
-    terms_to_skip = ['open', 'epi', 'bias', 'told', 'bdi', 'abc', 'win', 'mid', 'mot']
+    # "BRIEF"
+    terms_to_skip = ['open', 'epi', 'bias', 'told', 'bdi',
+                     'abc', 'win', 'mid', 'mot', 'brief']
     for termtype, terms in termdict.items():
         for term, td in terms.items():
             searchterms = [term.lower()]
