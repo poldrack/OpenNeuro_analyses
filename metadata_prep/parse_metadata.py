@@ -190,13 +190,19 @@ if __name__ == "__main__":
     verbose = True
     metadata_file = '../data/openneuro/db_metadata.json'
     bi_grant_file = '../data/nih_data/funded_awards-2021-05-30T12-08-20.csv'
+    nsf_bi_grant_file = '../data/nsf_data/brain_awards_06292021.csv'
 
     # get brain intitiative grant info
     bi_grant_df = pd.read_csv(bi_grant_file).dropna()
     bi_project_nums = get_bi_project_numbers(bi_grant_file)
     bi_grants = get_bi_grant_nums(bi_project_nums)
     if verbose:
-        print(f'found {len(bi_grants)} BI grants')
+        print(f'found {len(bi_grants)} NIH BI grants')
+
+    bi_grants_nsf_df = pd.read_csv(nsf_bi_grant_file)
+    bi_nsf_grantnums = [i for i in bi_grants_nsf_df.AwardNumber]
+    if verbose:
+        print(f'found {len(bi_nsf_grantnums)} NSF BI grants')
 
     # load ON metadata and parse
     with open(metadata_file) as f:
@@ -258,7 +264,7 @@ if __name__ == "__main__":
 
     bi_matches = [g for g in all_grants if g in bi_grants]
     print(f'{len(all_grants)} unique NIH grants cited in OpenNeuro')
-    print(f'{len(bi_matches)} BI grants cited in OpenNeuro')
+    print(f'{len(bi_matches)} NIH BI grants cited in OpenNeuro')
 
     bi_datasets = []
     for i in bi_matches:
@@ -272,12 +278,19 @@ if __name__ == "__main__":
         print('')
     bi_datasets = list(set(bi_datasets))
 
-    print(f'{len(bi_datasets)} unique datasets associated with BI grants')
+    print(f'{len(bi_datasets)} unique datasets associated with NIH BI grants')
 
     all_nsf_grants = []
+    nsf_bi_matches = []
     for k, grants in nsf_grants_cited.items():
         if grants is not None:
             for g in grants:
                 all_nsf_grants.append(g)
+                grantnum = int(g.split('-')[1])
+                if grantnum in bi_nsf_grantnums:
+                    nsf_bi_matches.append(g)
+
+    nsf_bi_matches = list(set(nsf_bi_matches))
     all_nsf_grants = list(set(all_nsf_grants))
     print(f'{len(all_nsf_grants)} unique NSF grants cited in OpenNeuro')
+    print(f'{len(nsf_bi_matches)} BI NSF grants cited in OpenNeuro')
