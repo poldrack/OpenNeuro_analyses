@@ -121,7 +121,6 @@ Modelling of Transcranial Magnetic Stimulation (TMS) Induced Fields in Different
 Neural topographic factor analysis for fmri data,ds000171
 Transcriptional and cellular signatures of cortical morphometric similarity remodelling in chronic pain,ds000171
 Beware (surprisingly common) left-right flips in your MRI data: an efficient and robust method to check MRI dataset consistency using AFNI,ds000172
-fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000172
 Fine-grain atlases of functional modes for fMRI analysis,ds000200
 Age effect on functional connectivity changes of right anterior insula after partial sleep deprivation,ds000201
 Age effect on gray matter volume changes after sleep restriction,ds000201
@@ -136,14 +135,12 @@ Sailing in rough waters: examining volatility of fMRI noise,ds000210
 Inter-group Heterogeneity of Regional Homogeneity (REHO),ds000210
 Common and different gray and white matter alterations in bipolar and borderline personality disorder: A source-based morphometry study,ds000214
 Fine-grain atlases of functional modes for fMRI analysis,ds000214
-fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000217
 Fine-grain atlases of functional modes for fMRI analysis,ds000220
 Idiopathic and acquired pedophilia as two distinct disorders: an insight from neuroimaging,ds000221
 Intact microstructure of the right corticostriatal pathway predicts creative ability in healthy adults,ds000221
 Mapping internal brainstem structures using MP2RAGE derived T1 weighted and T1 relaxation images at 3 and 7 T,ds000221
 Prediction of stimulus-independent and task-unrelated thought from functional brain networks,ds000221
 Quantity and quality: Normative open-access neuroimaging databases,ds000221
-fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000223
 Brainglance: visualizing group level MRI data at one glance,ds000224
 Diving into the deep end: A personal reflection on the MyConnectome Study,ds000224
 Edge-centric functional network representations of human cerebral cortex reveal overlapping system-level architecture,ds000224
@@ -173,7 +170,6 @@ Principal component analysis revealed multiple consistent responses to naturalis
 The Euler Characteristic: A General Topological Descriptor for Complex Data,ds000228
 Uncovering the topology of time-varying fmri data using cubical persistence,ds000228
 Does rs-fMRI preprocessing matter for prediction performance in machine learning?,ds000228
-fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000232
 Nature abhors a paywall: How open science can realize the potential of naturalistic stimuli,ds000233
 The identification of temporal communities through trajectory clustering correlates with single-trial behavioural fluctuations in neuroimaging data,ds000235
 ASLPrep: A Generalizable Platform for Processing of Arterial Spin Labeled MRI and Quantification of Regional Brain Perfusion,ds000240
@@ -244,3 +240,43 @@ Atlas-based brain extraction is robust across rat MRI studies,ds002870
 Deep learning based segmentation of brain tissue from diffusion MRI,ds003037
 Toward more robust and reproducible diffusion kurtosis imaging,ds003346
 Thinking out loud: an open-access EEG-based BCI dataset for inner speech recognition,ds003626
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000052
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000101
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000102
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000105
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000107
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000108
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000109
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000110
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000114
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000115
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000116
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000119
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000120
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000121
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000133
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000140
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000148
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000157
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000164
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000168
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000170
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000171
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000177
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000200
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000205
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000208
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000212
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000213
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000214
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000216
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000218
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000219
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000220
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000221
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000228
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000229
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000231
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000233
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000237
+fMRIPrep: a robust preprocessing pipeline for functional MRI,ds000243
