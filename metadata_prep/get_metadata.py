@@ -5,7 +5,7 @@ import json
 import sys
 
 headers = {
-    'Accept-Encoding': 'gzip, deflate, br',
+#    'Accept-Encoding': 'gzip, deflate, br',
     'Content-Type': 'application/json',
     'Accept': 'application/json',
     'Connection': 'keep-alive',
@@ -46,7 +46,10 @@ def get_snapshots(id):
     data = '{"query": %s}' % (snapshot_query % id)
     response = requests.post('https://openneuro.org/crn/graphql', headers=headers, data=data)
     md = response.json()
-    return([i['id'] for i in md['data']['dataset']['snapshots']])
+    if md['data']['dataset']['snapshots'] is not None:
+        return([i['id'] for i in md['data']['dataset']['snapshots']])
+    else:
+        return([])
 
 
 def get_metadata(id, verbose=False):

@@ -199,7 +199,7 @@ if __name__ == "__main__":
     if verbose:
         print(f'found {len(bi_grants)} NIH BI grants')
 
-    bi_grants_nsf_df = pd.read_csv(nsf_bi_grant_file)
+    bi_grants_nsf_df = pd.read_csv(nsf_bi_grant_file, encoding = "ISO-8859-1")
     bi_nsf_grantnums = [i for i in bi_grants_nsf_df.AwardNumber]
     if verbose:
         print(f'found {len(bi_nsf_grantnums)} NSF BI grants')
