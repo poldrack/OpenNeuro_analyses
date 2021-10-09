@@ -36,7 +36,8 @@ def download_datalad_dataset(ds, datadir):
 
 
 if __name__ == "__main__":
-    metadata_file = '../data/openneuro/metadata_06182021.csv'
-    datadir = '/home/poldrack/data/openneuro'
+    metadata_file = '../data/openneuro/metadata_sheet.csv'
+    # ran this on linux system with separate data partition
+    datadir = '/data/openneuro'
     dsnums = get_accession_numbers(metadata_file)
     download_datalad_datasets(dsnums, datadir)

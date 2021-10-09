@@ -24,11 +24,16 @@ def get_latest_snapshot_id(ds, db_metadata):
     # all snapshots should have 'latestSnapshot' defined
     # so we just need to take the first
     ds_matches = [i for i in db_metadata.keys() if i.find(ds) > -1]
-    return(db_metadata[ds_matches[0]]['latestSnapshot'])
+    if len(ds_matches) > 0:
+        return(db_metadata[ds_matches[0]]['latestSnapshot'])
+    else:
+        return([])
 
 
 def get_latest_snapshot_readme(ds, db_metadata):
     latest_snapshot_id = get_latest_snapshot_id(ds, db_metadata)
+    if len(latest_snapshot_id) == 0:
+        return(None)
     latest_snapshot_md = db_metadata[latest_snapshot_id]
     retval = db_metadata[latest_snapshot_id]['data']['snapshot']['description']['Name']
     if latest_snapshot_md['readme'] is not None:
@@ -59,7 +64,7 @@ def get_task_info():
 
 
 if __name__ == "__main__":
-    metadata_file = '../data/openneuro/metadata_06182021.csv'
+    metadata_file = '../data/openneuro/metadata_sheet.csv'
     db_metadata = get_db_metadata()
 
     # try to use saved version of terms, or download if not saved

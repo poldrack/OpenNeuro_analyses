@@ -44,8 +44,8 @@ def get_ds_info(ds):
 
 if __name__ == "__main__":
 
-    metadata_file = '../data/openneuro/metadata_06182021.csv'
-    datadir = Path('/home/poldrack/data/openneuro')
+    metadata_file = '../data/openneuro/metadata_sheet.csv'
+    datadir = Path('/data/openneuro')
     dsnums = get_accession_numbers(metadata_file)
 
     datasets = check_datasets(dsnums)
