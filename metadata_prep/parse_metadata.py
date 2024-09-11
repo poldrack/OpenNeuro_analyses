@@ -167,8 +167,9 @@ def is_nih_grant(grantnum, dummy=False):
     # based on https://gist.github.com/bosborne/8efbd21ffbe3dc8d057d80539114ab07
     if dummy:
         return(True)
-    url = 'https://api.federalreporter.nih.gov/v1/Projects/search'
-    params = {'query': f'projectNumber:*{grantnum}*'}
+    url = 'https://api.reporter.nih.gov/v2/projects/search'
+    params = {"criteria":{"project_nums": [grantnum]}}
+    #{'query': f'project_nums:[*{grantnum}*]'}
     r = requests.get(url, params=params)
     retval = r.json()
     return retval['totalCount'] > 0

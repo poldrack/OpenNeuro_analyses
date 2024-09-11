@@ -98,9 +98,10 @@ if __name__ == '__main__':
                 except:
                     metadata[s] = None
                     print('tried twice and failed:', s)
-            metadata[s]['readme'] = latest_snapshot[
-                'data']['dataset']['latestSnapshot']['readme']
-            metadata[s]['latestSnapshot'] = latest_snapshot[
-                'data']['dataset']['latestSnapshot']['id']
+            if metadata[s] is not None:
+                for k, v in  latest_snapshot['data']['dataset']['latestSnapshot'].items():
+                    if k == 'id':
+                        k = 'latestSnapshot'
+                    metadata[s][k] = v
     with open('../data/openneuro/db_metadata.json', 'w') as f:
         json.dump(metadata, f)
